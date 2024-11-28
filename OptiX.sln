@@ -2,11 +2,11 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptiX.Application", "src\OptiX.Application\OptiX.Application.csproj", "{8A18B138-8553-46C0-9CB9-5672FDFBCFCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptiX.App", "src\OptiX.App\OptiX.App.csproj", "{F107A314-BFA2-43D4-A721-1C90111DD5DC}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptiX.Domain", "src\OptiX.Domain\OptiX.Domain.csproj", "{EF10FF97-22BC-444D-9B1F-58C3B813F755}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optix.Infrastructure", "src\Optix.Infrastructure\Optix.Infrastructure.csproj", "{BE8EC167-D33A-4D6F-9EF9-2119936314D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptiX.App", "src\OptiX.App\OptiX.App.csproj", "{77EF97BB-881F-44B3-BE65-B2060E9EE852}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,10 +18,6 @@ Global
 		{8A18B138-8553-46C0-9CB9-5672FDFBCFCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A18B138-8553-46C0-9CB9-5672FDFBCFCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A18B138-8553-46C0-9CB9-5672FDFBCFCD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F107A314-BFA2-43D4-A721-1C90111DD5DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F107A314-BFA2-43D4-A721-1C90111DD5DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F107A314-BFA2-43D4-A721-1C90111DD5DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F107A314-BFA2-43D4-A721-1C90111DD5DC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EF10FF97-22BC-444D-9B1F-58C3B813F755}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EF10FF97-22BC-444D-9B1F-58C3B813F755}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF10FF97-22BC-444D-9B1F-58C3B813F755}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -30,5 +26,9 @@ Global
 		{BE8EC167-D33A-4D6F-9EF9-2119936314D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE8EC167-D33A-4D6F-9EF9-2119936314D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE8EC167-D33A-4D6F-9EF9-2119936314D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77EF97BB-881F-44B3-BE65-B2060E9EE852}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77EF97BB-881F-44B3-BE65-B2060E9EE852}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77EF97BB-881F-44B3-BE65-B2060E9EE852}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77EF97BB-881F-44B3-BE65-B2060E9EE852}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
