@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptiX.Domain", "src\OptiX.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optix.Infrastructure", "src\Optix.Infrastructure\Optix.Infrastructure.csproj", "{BE8EC167-D33A-4D6F-9EF9-2119936314D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptiX.App", "src\OptiX.App\OptiX.App.csproj", "{77EF97BB-881F-44B3-BE65-B2060E9EE852}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptiX.App", "src\OptiX.App\OptiX.App.csproj", "{20F4A068-3F5B-4D83-94CF-C3F5271184FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,9 +26,9 @@ Global
 		{BE8EC167-D33A-4D6F-9EF9-2119936314D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE8EC167-D33A-4D6F-9EF9-2119936314D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE8EC167-D33A-4D6F-9EF9-2119936314D2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{77EF97BB-881F-44B3-BE65-B2060E9EE852}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{77EF97BB-881F-44B3-BE65-B2060E9EE852}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{77EF97BB-881F-44B3-BE65-B2060E9EE852}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{77EF97BB-881F-44B3-BE65-B2060E9EE852}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20F4A068-3F5B-4D83-94CF-C3F5271184FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20F4A068-3F5B-4D83-94CF-C3F5271184FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20F4A068-3F5B-4D83-94CF-C3F5271184FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20F4A068-3F5B-4D83-94CF-C3F5271184FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
