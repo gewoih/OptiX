@@ -12,7 +12,7 @@ public sealed class AppDbContext : IdentityDbContext<User, Role, Guid>
     public DbSet<UserProfile> UserProfiles { get; set; }
     public DbSet<Account> Accounts { get; set; }
     public DbSet<Asset> Assets { get; set; }
-    public DbSet<MarketData> MarketData { get; set; }
+    public DbSet<Tick> Ticks { get; set; }
     public DbSet<Trade> Trades { get; set; }
     
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)

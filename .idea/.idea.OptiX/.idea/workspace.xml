@@ -23,74 +23,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d980ee12-c4dd-4d59-b270-8afe19edf39b" name="Changes" comment="feat: basic entities, initial migration and blazor server app">
-      <change afterPath="$PROJECT_DIR$/src/OptiX.App/Components/Pages/Counter.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OptiX.App/Components/Pages/Weather.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OptiX.App/wwwroot/favicon.ico" afterDir="false" />
+    <list default="true" id="d980ee12-c4dd-4d59-b270-8afe19edf39b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/Asset/AssetDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/Asset/AssetService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/Asset/IAssetService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/Binance/BinanceMarketDataLoader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/MarketData/ITicksService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/MarketData/TickDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/MarketData/TicksService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OptiX/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OptiX/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OptiX.sln" beforeDir="false" afterPath="$PROJECT_DIR$/OptiX.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Components/App.razor" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.App/Components/App.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Components/Layout/MainLayout.razor" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.App/Components/Layout/MainLayout.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Components/Layout/MainLayout.razor.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Components/Layout/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.App/Components/Layout/NavMenu.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Components/Layout/NavMenu.razor.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Components/Pages/Error.razor" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.App/Components/Pages/Error.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Components/Pages/Home.razor" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.App/Components/Pages/Home.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Components/Routes.razor" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.App/Components/Routes.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Components/_Imports.razor" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.App/Components/_Imports.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/OptiX.App.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.App/OptiX.App.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OptiX.App/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.App/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OptiX.App/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.App/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OptiX.Application/OptiX.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/OptiX.Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/OptiX.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/OptiX.Domain.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/20241128150125_Initial.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/20241128161940_Initial.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/20241128150125_Initial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/20241128161940_Initial.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Base/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Base/Entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Trading/Account.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/Entities/User/Account.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Trading/Asset/Asset.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Asset/Asset.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Trading/Asset/MarketData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Asset/Tick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Trading/Trade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/Entities/User/Trade.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Database/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Optix.Infrastructure/Database/AppDbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Optix.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Optix.Infrastructure/Optix.Infrastructure.csproj" afterDir="false" />
     </list>
@@ -113,18 +63,20 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/gewoih/opti-x&quot;,
+    &quot;url&quot;: &quot;https://github.com/gewoih/opti-x.git&quot;,
     &quot;accountId&quot;: &quot;962a9a12-618a-4f02-9168-6c5a74fb6bc9&quot;
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/211e6f3b24fa438a92f1815153647ce2c8f908/c3/1b7af176/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2ec160d423aad657354dc9a131203dc51844dc105bb7d6e906949b8f3b75671/Host.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bd1d5c50194fea68ff3559c160230b0ab50f5acf4ce3061bffd6d62958e2182/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ce37be1a06b16c6faa02038d2cc477dd3bca5b217ceeb41c5f2ad45c1bf9/ServiceProvider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/OptiX.App/Components/Pages/Error.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/OptiX.App/Components/Pages/Weather.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/OptiX.App/Components/Routes.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/OptiX.App/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/OptiX.App/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/OptiX.Domain/Entities/Asset/Tick.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -364,7 +316,10 @@
       <workItem from="1731176695032" duration="600000" />
       <workItem from="1732799468470" duration="797000" />
       <workItem from="1732800278917" duration="1401000" />
-      <workItem from="1732801695340" duration="8994000" />
+      <workItem from="1732801695340" duration="10222000" />
+      <workItem from="1732868071592" duration="6000" />
+      <workItem from="1732882568999" duration="4265000" />
+      <workItem from="1732894123942" duration="3399000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -406,7 +361,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732806610775</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat: MudBlazor implemented">
+      <option name="closed" value="true" />
+      <created>1732810867160</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732810867160</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,6 +386,7 @@
     <MESSAGE value="feat: excess files removed" />
     <MESSAGE value="chore: project structure" />
     <MESSAGE value="feat: basic entities, initial migration and blazor server app" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: basic entities, initial migration and blazor server app" />
+    <MESSAGE value="feat: MudBlazor implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: MudBlazor implemented" />
   </component>
 </project>

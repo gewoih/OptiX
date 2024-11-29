@@ -6,4 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Optix.Infrastructure\Optix.Infrastructure.csproj" />
+    </ItemGroup>
+
 </Project>

@@ -131,9 +131,6 @@ namespace Optix.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<string>("Caption")
-                        .HasColumnType("text");
-
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("timestamp with time zone");
 
@@ -165,9 +162,6 @@ namespace Optix.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<string>("Caption")
-                        .HasColumnType("text");
-
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("timestamp with time zone");
 
@@ -179,6 +173,11 @@ namespace Optix.Infrastructure.Migrations
 
                     b.Property<DateTime?>("ModifiedDate")
                         .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Symbol")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("character varying(10)");
 
                     b.Property<int>("Type")
                         .HasColumnType("integer");
@@ -188,7 +187,7 @@ namespace Optix.Infrastructure.Migrations
                     b.ToTable("Assets");
                 });
 
-            modelBuilder.Entity("OptiX.Domain.Entities.Asset.MarketData", b =>
+            modelBuilder.Entity("OptiX.Domain.Entities.Asset.Tick", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -197,32 +196,23 @@ namespace Optix.Infrastructure.Migrations
                     b.Property<Guid>("AssetId")
                         .HasColumnType("uuid");
 
-                    b.Property<string>("Caption")
-                        .HasColumnType("text");
-
                     b.Property<decimal>("Close")
                         .HasColumnType("numeric");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<DateTime?>("DeletedDate")
+                    b.Property<DateTime>("DateTime")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<decimal>("High")
-                        .HasColumnType("numeric");
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("boolean");
 
-                    b.Property<decimal>("Low")
-                        .HasColumnType("numeric");
-
                     b.Property<DateTime?>("ModifiedDate")
                         .HasColumnType("timestamp with time zone");
-
-                    b.Property<decimal>("Open")
-                        .HasColumnType("numeric");
 
                     b.Property<decimal>("Volume")
                         .HasColumnType("numeric");
@@ -231,7 +221,7 @@ namespace Optix.Infrastructure.Migrations
 
                     b.HasIndex("AssetId");
 
-                    b.ToTable("MarketData");
+                    b.ToTable("Ticks");
                 });
 
             modelBuilder.Entity("OptiX.Domain.Entities.Asset.Trade", b =>
@@ -248,9 +238,6 @@ namespace Optix.Infrastructure.Migrations
 
                     b.Property<Guid>("AssetId")
                         .HasColumnType("uuid");
-
-                    b.Property<string>("Caption")
-                        .HasColumnType("text");
 
                     b.Property<decimal>("ClosePrice")
                         .HasColumnType("numeric");
@@ -392,9 +379,6 @@ namespace Optix.Infrastructure.Migrations
                     b.Property<DateOnly>("BirthDate")
                         .HasColumnType("date");
 
-                    b.Property<string>("Caption")
-                        .HasColumnType("text");
-
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("timestamp with time zone");
 
@@ -472,7 +456,7 @@ namespace Optix.Infrastructure.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("OptiX.Domain.Entities.Asset.MarketData", b =>
+            modelBuilder.Entity("OptiX.Domain.Entities.Asset.Tick", b =>
                 {
                     b.HasOne("OptiX.Domain.Entities.Asset.Asset", null)
                         .WithMany("MarketData")
