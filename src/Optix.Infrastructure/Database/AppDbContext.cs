@@ -55,15 +55,15 @@ public sealed class AppDbContext : IdentityDbContext<User, Role, Guid>
                 switch (entry.State)
                 {
                     case EntityState.Modified:
-                        trackable.ModifiedDate = utcNow;
+                        trackable.ModifiedAt = utcNow;
                         break;
                     case EntityState.Added:
-                        trackable.CreatedDate = utcNow;
+                        trackable.CreatedAt = utcNow;
                         break;
                     case EntityState.Deleted:
                         entry.State = EntityState.Modified;
                         trackable.IsDeleted = true;
-                        trackable.DeletedDate = utcNow;
+                        trackable.DeletedAt = utcNow;
                         break;
                 }
             }

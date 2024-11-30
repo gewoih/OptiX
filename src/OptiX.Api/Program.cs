@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using OptiX.Application.Account;
 using OptiX.Application.Asset;
 using OptiX.Application.Binance;
 using OptiX.Application.MarketData;
@@ -30,6 +31,7 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(connect
 
 builder.Services.AddScoped<IAssetService, AssetService>();
 builder.Services.AddScoped<ITicksService, TicksService>();
+builder.Services.AddScoped<IAccountService, AccountService>();
 
 builder.Services.AddHostedService<BinanceMarketDataLoader>();
 

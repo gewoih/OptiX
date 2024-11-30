@@ -9,5 +9,5 @@ public sealed class Asset : Entity
     [MaxLength(10)]
     public required string Symbol { get; set; }
     public AssetType Type { get; set; }
-    public ICollection<Tick> MarketData { get; set; }
+    public ICollection<Tick> MarketData { get; set; } = [];
 }

@@ -18,7 +18,7 @@ public sealed class TicksService : ITicksService
             AssetId = assetId,
             Price = marketData.Price,
             Volume = marketData.Volume,
-            DateTime = marketData.DateTime
+            Date = marketData.DateTime
         });
         
         await _context.Ticks.AddRangeAsync(marketDataToSave);
