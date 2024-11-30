@@ -26,28 +26,67 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d980ee12-c4dd-4d59-b270-8afe19edf39b" name="Changes" comment="feat: signalrClient.ts and price chart">
-      <change afterPath="$PROJECT_DIR$/src/OptiX.Api/Controllers/AccountsController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OptiX.Api/Controllers/AuthController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/Account/AccountDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/Account/AccountService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/Account/IAccountService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/Account/Requests/CreateAccountRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/Account/Requests/GetAllAccountsRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Trading/Transaction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OptiX.Domain/ValueObjects/TransactionTrigger.cs" afterDir="false" />
+    <list default="true" id="d980ee12-c4dd-4d59-b270-8afe19edf39b" name="Changes" comment="feat: AccountService.cs">
+      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/Users/IUserService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/Users/UserService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/20241130152847_Init2.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/20241130152847_Init2.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/src/lib/api.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/src/lib/authService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/src/lib/stores/user.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/src/routes/google/+page.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/src/routes/login/+page.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/optix/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/optix/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/optix/.prettierrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/optix/.vscode/extensions.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/optix/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/optix/components.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/optix/env.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/optix/eslint.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/optix/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/optix/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/optix/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/optix/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/optix/src/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/optix/src/components/Login.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/optix/src/components/google/GoogleCallback.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/optix/src/components/layout/Header.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/optix/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/optix/src/router/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/optix/src/services/api.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/optix/src/services/auth.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/optix/src/stores/user.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/optix/src/views/HomeView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/optix/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/optix/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/optix/tsconfig.node.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/optix/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.OptiX/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OptiX/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OptiX/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OptiX/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Api/Controllers/AccountsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/Controllers/AccountsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Api/Controllers/AssetsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/Controllers/AssetsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Api/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/Controllers/AuthController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OptiX.Api/OptiX.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/OptiX.Api.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OptiX.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/MarketData/TicksService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/MarketData/TicksService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Asset/Asset.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Asset/Asset.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Asset/Tick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Asset/Tick.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Base/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Base/Entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/Entities/User/Account.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Trading/Account.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/Entities/User/Trade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Trading/Trade.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Api/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Account/AccountDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Accounts/AccountDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Account/AccountService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Accounts/AccountService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Account/IAccountService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Accounts/IAccountService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Account/Requests/CreateAccountRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Accounts/Requests/CreateAccountRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Account/Requests/GetAllAccountsRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Accounts/Requests/GetAllAccountsRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Asset/AssetDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Assets/AssetDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Asset/AssetService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Assets/AssetService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Asset/IAssetService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Assets/IAssetService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Binance/BinanceMarketDataLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Binance/BinanceMarketDataLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/OptiX.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/OptiX.Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Identity/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Identity/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Trading/Account.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Trading/Account.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Trading/Trade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Trading/Trade.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Trading/Transaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Trading/Transaction.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Database/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Optix.Infrastructure/Database/AppDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +100,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="chart" />
+        <option value="+page" />
         <option value="TypeScript File" />
+        <option value="Vue Composition API Component" />
       </list>
     </option>
   </component>
@@ -88,10 +129,14 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ce37be1a06b16c6faa02038d2cc477dd3bca5b217ceeb41c5f2ad45c1bf9/ServiceProvider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f6f937e7fde51c3ca061c59112cdd35b76a72e9ef8821ac361c6ef71e90ea88/ControllerEndpointRouteBuilderExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/OptiX.Api/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/OptiX.Api/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/OptiX.Application/Account/AccountService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/OptiX.Application/Users/IUserService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/OptiX.Application/Users/UserService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/OptiX.Domain/Entities/Asset/Tick.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/app/package-lock.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/app/package-lock.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/app/package-lock.json" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/app/package-lock.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/app/package-lock.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/app/package.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -122,14 +167,20 @@
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
+    "jsx.switch.disabled": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "ts.external.directory.path": "C:\\Users\\nrane\\Desktop\\Projects\\OptiX\\src\\app\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "C:\\Users\\nrane\\Desktop\\Projects\\OptiX\\src\\optix\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "vue.recent.templates": [
+      "Vue Composition API Component"
+    ]
   }
 }]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.OptiX.Api: https">
@@ -226,7 +277,7 @@
       <workItem from="1732882568999" duration="4265000" />
       <workItem from="1732894123942" duration="8006000" />
       <workItem from="1732952275943" duration="2078000" />
-      <workItem from="1732965671728" duration="12219000" />
+      <workItem from="1732965671728" duration="20101000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -300,7 +351,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732974013480</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="feat: AccountService.cs">
+      <option name="closed" value="true" />
+      <created>1732982661561</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1732982661561</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,6 +380,7 @@
     <MESSAGE value="feat: binance ticks loading, AssetService.cs and TicksService.cs" />
     <MESSAGE value="feat: web api project init" />
     <MESSAGE value="feat: signalrClient.ts and price chart" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: signalrClient.ts and price chart" />
+    <MESSAGE value="feat: AccountService.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: AccountService.cs" />
   </component>
 </project>

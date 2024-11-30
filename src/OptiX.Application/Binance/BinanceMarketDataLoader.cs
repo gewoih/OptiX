@@ -2,7 +2,7 @@ using Binance.Net.Clients;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using OptiX.Application.Asset;
+using OptiX.Application.Assets;
 using OptiX.Application.MarketData;
 using OptiX.Application.SignalR;
 

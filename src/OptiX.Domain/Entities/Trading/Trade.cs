@@ -1,6 +1,6 @@
 using OptiX.Domain.Entities.Base;
 
-namespace OptiX.Domain.Entities.User;
+namespace OptiX.Domain.Entities.Trading;
 
 public sealed class Trade : Entity
 {

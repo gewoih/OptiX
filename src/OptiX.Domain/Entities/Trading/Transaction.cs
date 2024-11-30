@@ -1,7 +1,7 @@
 using OptiX.Domain.Entities.Base;
 using OptiX.Domain.ValueObjects;
 
-namespace OptiX.Domain.Entities.User;
+namespace OptiX.Domain.Entities.Trading;
 
 public sealed class Transaction : Entity
 {

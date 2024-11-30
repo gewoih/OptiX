@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using OptiX.Application.Asset;
+using OptiX.Application.Assets;
 
 namespace OptiX.Api.Controllers
 {

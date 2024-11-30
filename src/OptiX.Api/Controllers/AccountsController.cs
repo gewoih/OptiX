@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using OptiX.Application.Account;
+using OptiX.Application.Accounts;
+using OptiX.Application.Accounts.Requests;
 
 namespace OptiX.Api.Controllers
 {

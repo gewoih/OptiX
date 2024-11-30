@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using OptiX.Domain.Entities.Asset;
+using OptiX.Domain.Entities.Trading;
 using OptiX.Domain.Entities.User;
 
 namespace OptiX.Domain.Entities.Identity;

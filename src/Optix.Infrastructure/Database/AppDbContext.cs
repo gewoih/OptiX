@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using OptiX.Domain.Entities.Asset;
 using OptiX.Domain.Entities.Base;
 using OptiX.Domain.Entities.Identity;
+using OptiX.Domain.Entities.Trading;
 using OptiX.Domain.Entities.User;
 
 namespace Optix.Infrastructure.Database;
