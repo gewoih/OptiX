@@ -26,36 +26,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d980ee12-c4dd-4d59-b270-8afe19edf39b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/OptiX.sln.DotSettings.user" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OptiX.Api/OptiX.Api.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OptiX.Api/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/SignalR/MarketDataHub.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.OptiX/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OptiX/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OptiX.sln" beforeDir="false" afterPath="$PROJECT_DIR$/OptiX.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Components/App.razor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Components/Layout/MainLayout.razor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Components/Layout/NavMenu.razor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Components/Pages/Counter.razor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Components/Pages/Error.razor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Components/Pages/Home.razor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Components/Pages/Weather.razor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Components/Routes.razor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Components/_Imports.razor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/OptiX.App.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Properties/launchSettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Binance/BinanceMarketDataLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Binance/BinanceMarketDataLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/OptiX.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/OptiX.Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/OptiX.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/OptiX.Domain.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/20241128161940_Initial.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/20241128161940_Initial.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Optix.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Optix.Infrastructure/Optix.Infrastructure.csproj" afterDir="false" />
-    </list>
+    <list default="true" id="d980ee12-c4dd-4d59-b270-8afe19edf39b" name="Changes" comment="feat: web api project init" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -218,7 +189,7 @@
       <workItem from="1732868071592" duration="6000" />
       <workItem from="1732882568999" duration="4265000" />
       <workItem from="1732894123942" duration="8006000" />
-      <workItem from="1732952275943" duration="1700000" />
+      <workItem from="1732952275943" duration="2078000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -276,7 +247,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732902241348</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: web api project init">
+      <option name="closed" value="true" />
+      <created>1732954060304</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1732954060304</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,6 +274,7 @@
     <MESSAGE value="feat: basic entities, initial migration and blazor server app" />
     <MESSAGE value="feat: MudBlazor implemented" />
     <MESSAGE value="feat: binance ticks loading, AssetService.cs and TicksService.cs" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: binance ticks loading, AssetService.cs and TicksService.cs" />
+    <MESSAGE value="feat: web api project init" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: web api project init" />
   </component>
 </project>
