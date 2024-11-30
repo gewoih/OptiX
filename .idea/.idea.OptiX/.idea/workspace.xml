@@ -6,6 +6,8 @@
     <projectFile profileName="https">BlazorApp1/BlazorApp1/BlazorApp1.csproj</projectFile>
     <projectFile profileName="http">BlazorApp2/BlazorApp2.csproj</projectFile>
     <projectFile profileName="https">BlazorApp2/BlazorApp2.csproj</projectFile>
+    <projectFile profileName="http">OptiX.Api/OptiX.Api.csproj</projectFile>
+    <projectFile profileName="https">OptiX.Api/OptiX.Api.csproj</projectFile>
     <projectFile kind="Docker">OptiX.App/OptiX.App.csproj</projectFile>
     <projectFile profileName="http">OptiX.App/OptiX.App.csproj</projectFile>
     <projectFile profileName="https">OptiX.App/OptiX.App.csproj</projectFile>
@@ -14,6 +16,7 @@
     <projectFile profileName="IIS Express">src/MyApplication/MyApplication.csproj</projectFile>
     <projectFile profileName="http">src/MyApplication/MyApplication.csproj</projectFile>
     <projectFile profileName="https">src/MyApplication/MyApplication.csproj</projectFile>
+    <projectFile>src/OptiX.Api/OptiX.Api.csproj</projectFile>
     <projectFile kind="Docker">src/OptiX.App/OptiX.App.csproj</projectFile>
     <projectFile profileName="IIS Express">src/OptiX.App/OptiX.App.csproj</projectFile>
     <projectFile profileName="http">src/OptiX.App/OptiX.App.csproj</projectFile>
@@ -24,24 +27,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d980ee12-c4dd-4d59-b270-8afe19edf39b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/Asset/AssetDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/Asset/AssetService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/Asset/IAssetService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/Binance/BinanceMarketDataLoader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/MarketData/ITicksService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/MarketData/TickDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/MarketData/TicksService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OptiX.sln.DotSettings.user" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OptiX.Api/OptiX.Api.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OptiX.Api/Properties/launchSettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/SignalR/MarketDataHub.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OptiX/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OptiX/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.App/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.App/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OptiX.sln" beforeDir="false" afterPath="$PROJECT_DIR$/OptiX.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Components/App.razor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Components/Layout/MainLayout.razor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Components/Layout/NavMenu.razor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Components/Pages/Counter.razor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Components/Pages/Error.razor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Components/Pages/Home.razor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Components/Pages/Weather.razor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Components/Routes.razor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Components/_Imports.razor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.App/OptiX.App.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.App/Properties/launchSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.App/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.App/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.App/wwwroot/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Binance/BinanceMarketDataLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Binance/BinanceMarketDataLoader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OptiX.Application/OptiX.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/OptiX.Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Base/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Base/Entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Trading/Account.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/Entities/User/Account.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Trading/Asset/Asset.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Asset/Asset.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Trading/Asset/MarketData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Asset/Tick.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Trading/Trade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/Entities/User/Trade.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Database/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Optix.Infrastructure/Database/AppDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/OptiX.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/OptiX.Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/20241128161940_Initial.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/20241128161940_Initial.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Optix.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Optix.Infrastructure/Optix.Infrastructure.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,14 +81,13 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/211e6f3b24fa438a92f1815153647ce2c8f908/c3/1b7af176/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/36af73a990fe4e92a7fe348f070581f68b8e00/24/e1e39a4c/ChartSeries.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2ec160d423aad657354dc9a131203dc51844dc105bb7d6e906949b8f3b75671/Host.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bd1d5c50194fea68ff3559c160230b0ab50f5acf4ce3061bffd6d62958e2182/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ce37be1a06b16c6faa02038d2cc477dd3bca5b217ceeb41c5f2ad45c1bf9/ServiceProvider.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/OptiX.App/Components/Pages/Error.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/OptiX.App/Components/Pages/Weather.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/OptiX.App/Components/Routes.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/OptiX.App/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/OptiX.Application/Binance/BinanceMarketDataLoader.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/OptiX.Domain/Entities/Asset/Tick.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/Optix.Infrastructure/Migrations/AppDbContextModelSnapshot.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -94,65 +105,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.MyApplication: IIS Express.executor&quot;: &quot;Debug&quot;,
-    &quot;.NET Launch Settings Profile.MyApplication: https.executor&quot;: &quot;Debug&quot;,
-    &quot;.NET Launch Settings Profile.OptiX.App: https.executor&quot;: &quot;Debug&quot;,
-    &quot;.NET Launch Settings Profile.OptiX: https.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.MyApplication: IIS Express.executor": "Debug",
+    ".NET Launch Settings Profile.MyApplication: https.executor": "Debug",
+    ".NET Launch Settings Profile.OptiX.Api: https.executor": "Debug",
+    ".NET Launch Settings Profile.OptiX.App: https.executor": "Debug",
+    ".NET Launch Settings Profile.OptiX: https.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.OptiX.App: https">
-    <configuration name="BlazorApp1.Client" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
+}]]></component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.OptiX.Api: https">
+    <configuration name="OptiX.Api" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/src/OptiX.Api/bin/Debug/net9.0/OptiX.Api.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/OptiX.Api" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/BlazorApp1/BlazorApp1.Client/BlazorApp1.Client.csproj" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/src/OptiX.Api/OptiX.Api.csproj" />
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
+      <option name="PROJECT_TFM" value="net9.0" />
       <method v="2">
         <option name="Build" />
       </method>
     </configuration>
-    <configuration name="OptiX.App" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/src/OptiX.App/OptiX.App.csproj" />
-      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
-      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
-      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
-      <method v="2">
-        <option name="Build" />
-      </method>
-    </configuration>
-    <configuration name="OptiX: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
-      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/src/OptiX.App/OptiX.App.csproj" />
+    <configuration name="OptiX.Api: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/src/OptiX.Api/OptiX.Api.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net9.0" />
       <option name="LAUNCH_PROFILE_NAME" value="http" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
@@ -166,55 +160,9 @@
         <option name="Build" />
       </method>
     </configuration>
-    <configuration name="OptiX: https" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
-      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/src/OptiX.App/OptiX.App.csproj" />
+    <configuration name="OptiX.Api: https" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/src/OptiX.Api/OptiX.Api.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net9.0" />
-      <option name="LAUNCH_PROFILE_NAME" value="http" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <browser name="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
-      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
-      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
-      <option name="SEND_DEBUG_REQUEST" value="1" />
-      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
-      <method v="2">
-        <option name="Build" />
-      </method>
-    </configuration>
-    <configuration name="OptiX.App: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
-      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/src/OptiX.App/OptiX.App.csproj" />
-      <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
-      <option name="LAUNCH_PROFILE_NAME" value="IIS Express" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
-      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
-      <option name="SEND_DEBUG_REQUEST" value="1" />
-      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
-      <method v="2">
-        <option name="Build" />
-      </method>
-    </configuration>
-    <configuration name="OptiX.App: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
-      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/src/OptiX.App/OptiX.App.csproj" />
-      <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
-      <option name="LAUNCH_PROFILE_NAME" value="http" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
-      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
-      <option name="SEND_DEBUG_REQUEST" value="1" />
-      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
-      <method v="2">
-        <option name="Build" />
-      </method>
-    </configuration>
-    <configuration name="OptiX.App: https" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
-      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/src/OptiX.App/OptiX.App.csproj" />
-      <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
       <option name="LAUNCH_PROFILE_NAME" value="https" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
@@ -241,49 +189,6 @@
       <method v="2">
         <option name="Build" />
       </method>
-    </configuration>
-    <configuration name="BlazorApp2/Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="imageTag" value="blazorapp2" />
-          <option name="containerName" value="blazorapp2" />
-          <option name="contextFolderPath" value="C:\Users\nrane\Desktop\Projects\OptiX" />
-          <option name="portBindings">
-            <list>
-              <DockerPortBindingImpl>
-                <option name="containerPort" value="8080" />
-                <option name="hostIp" value="127.0.0.1" />
-                <option name="hostPort" value="8080" />
-              </DockerPortBindingImpl>
-            </list>
-          </option>
-          <option name="sourceFilePath" value="BlazorApp2/Dockerfile" />
-        </settings>
-      </deployment>
-      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
-      <method v="2" />
-    </configuration>
-    <configuration name="OptiX.App/Dockerfile (1)" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="containerName" value="optix.app" />
-          <option name="contextFolderPath" value="C:\Users\nrane\Desktop\Projects\OptiX" />
-          <option name="sourceFilePath" value="src/OptiX.App/Dockerfile" />
-        </settings>
-      </deployment>
-      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
-      <method v="2" />
-    </configuration>
-    <configuration name="OptiX.App/Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="containerName" value="optix.app" />
-          <option name="contextFolderPath" value="C:\Users\nrane\Desktop\Projects\OptiX" />
-          <option name="sourceFilePath" value="OptiX.App/Dockerfile" />
-        </settings>
-      </deployment>
-      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
-      <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
       <deployment type="dockerfile">
@@ -293,16 +198,9 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue=".NET Launch Settings Profile.OptiX.App: IIS Express" />
-      <item itemvalue=".NET Launch Settings Profile.OptiX.App: http" />
-      <item itemvalue=".NET Launch Settings Profile.OptiX.App: https" />
-      <item itemvalue=".NET Launch Settings Profile.OptiX: http" />
-      <item itemvalue=".NET Launch Settings Profile.OptiX: https" />
-      <item itemvalue=".NET Project.BlazorApp1.Client" />
-      <item itemvalue=".NET Project.OptiX.App" />
-      <item itemvalue="Docker.BlazorApp2/Dockerfile" />
-      <item itemvalue="Docker.OptiX.App/Dockerfile" />
-      <item itemvalue="Docker.OptiX.App/Dockerfile (1)" />
+      <item itemvalue=".NET Launch Settings Profile.OptiX.Api: http" />
+      <item itemvalue=".NET Launch Settings Profile.OptiX.Api: https" />
+      <item itemvalue=".NET Project.OptiX.Api" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -319,7 +217,8 @@
       <workItem from="1732801695340" duration="10222000" />
       <workItem from="1732868071592" duration="6000" />
       <workItem from="1732882568999" duration="4265000" />
-      <workItem from="1732894123942" duration="3399000" />
+      <workItem from="1732894123942" duration="8006000" />
+      <workItem from="1732952275943" duration="1700000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -369,7 +268,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732810867160</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feat: binance ticks loading, AssetService.cs and TicksService.cs">
+      <option name="closed" value="true" />
+      <created>1732902241348</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732902241348</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,6 +294,7 @@
     <MESSAGE value="chore: project structure" />
     <MESSAGE value="feat: basic entities, initial migration and blazor server app" />
     <MESSAGE value="feat: MudBlazor implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: MudBlazor implemented" />
+    <MESSAGE value="feat: binance ticks loading, AssetService.cs and TicksService.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: binance ticks loading, AssetService.cs and TicksService.cs" />
   </component>
 </project>

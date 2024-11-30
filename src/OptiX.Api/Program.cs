@@ -1,17 +1,15 @@
 using Microsoft.EntityFrameworkCore;
-using MudBlazor.Services;
-using MyApplication.Components;
 using OptiX.Application.Asset;
 using OptiX.Application.Binance;
 using OptiX.Application.MarketData;
 using Optix.Infrastructure.Database;
+using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddMudServices();
+builder.Services.AddOpenApi();
 
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
+builder.Services.AddSignalR();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(connectionString));
@@ -27,18 +25,12 @@ var scope = app.Services.CreateScope();
 var database = scope.ServiceProvider.GetService<AppDbContext>()?.Database;
 await database?.MigrateAsync();
 
-if (!app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Error", createScopeForErrors: true);
-    app.UseHsts();
+    app.MapOpenApi();
+    app.MapScalarApiReference();
 }
 
 app.UseHttpsRedirection();
 
-app.UseStaticFiles();
-app.UseAntiforgery();
-
-app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode();
-
-await app.RunAsync();
+app.Run();

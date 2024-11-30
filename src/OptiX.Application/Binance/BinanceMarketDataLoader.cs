@@ -1,23 +1,24 @@
 using Binance.Net.Clients;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using OptiX.Application.Asset;
 using OptiX.Application.MarketData;
+using OptiX.Application.SignalR;
 
 namespace OptiX.Application.Binance;
 
 public sealed class BinanceMarketDataLoader : BackgroundService
 {
     private readonly BinanceSocketClient _binanceSocketClient;
+    private readonly IHubContext<MarketDataHub> _hubContext;
     private readonly IServiceProvider _serviceProvider;
-    private readonly ILogger<BinanceMarketDataLoader> _logger;
 
-    public BinanceMarketDataLoader(ILogger<BinanceMarketDataLoader> logger, IServiceProvider serviceProvider)
+    public BinanceMarketDataLoader(IServiceProvider serviceProvider, IHubContext<MarketDataHub> hubContext)
     {
         _binanceSocketClient = new BinanceSocketClient();
-        _logger = logger;
         _serviceProvider = serviceProvider;
+        _hubContext = hubContext;
     }
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -38,7 +39,7 @@ public sealed class BinanceMarketDataLoader : BackgroundService
                 using var scope = _serviceProvider.CreateScope();
                 var ticksService = scope.ServiceProvider.GetRequiredService<ITicksService>();
                 
-                var assetId = symbolsAndAssetIds[update.Symbol!];
+                var assetId = symbolsAndAssetIds[update.Symbol];
                 var tick = new TickDto
                 {
                     DateTime = update.Data.TradeTime,
@@ -47,6 +48,8 @@ public sealed class BinanceMarketDataLoader : BackgroundService
                 };
 
                 await ticksService.SaveAsync(assetId, [tick]);
+                
+                await _hubContext.Clients.Group(update.Symbol).SendAsync("ReceiveMarketData", tick, cancellationToken: stoppingToken);
             }, stoppingToken);
     }
 }
