@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using OptiX.Application.Accounts.Requests;
 using OptiX.Application.Accounts.Services;
@@ -6,6 +7,7 @@ namespace OptiX.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class AccountsController : ControllerBase
     {
         private readonly IAccountService _accountService;

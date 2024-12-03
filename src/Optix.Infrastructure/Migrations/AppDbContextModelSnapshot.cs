@@ -290,7 +290,7 @@ namespace Optix.Infrastructure.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("OptiX.Domain.Entities.User.Account", b =>
+            modelBuilder.Entity("OptiX.Domain.Entities.Trading.Account", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -325,7 +325,7 @@ namespace Optix.Infrastructure.Migrations
                     b.ToTable("Accounts");
                 });
 
-            modelBuilder.Entity("OptiX.Domain.Entities.User.Trade", b =>
+            modelBuilder.Entity("OptiX.Domain.Entities.Trading.Trade", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -355,6 +355,9 @@ namespace Optix.Infrastructure.Migrations
                     b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<int>("Direction")
+                        .HasColumnType("integer");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("boolean");
 
@@ -367,6 +370,12 @@ namespace Optix.Infrastructure.Migrations
                     b.Property<DateTime>("OpenedAt")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<decimal?>("Profit")
+                        .HasColumnType("numeric");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
 
                     b.HasIndex("AccountId");
@@ -374,7 +383,7 @@ namespace Optix.Infrastructure.Migrations
                     b.ToTable("Trades");
                 });
 
-            modelBuilder.Entity("OptiX.Domain.Entities.User.Transaction", b =>
+            modelBuilder.Entity("OptiX.Domain.Entities.Trading.Transaction", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -508,7 +517,7 @@ namespace Optix.Infrastructure.Migrations
                     b.Navigation("Profile");
                 });
 
-            modelBuilder.Entity("OptiX.Domain.Entities.User.Account", b =>
+            modelBuilder.Entity("OptiX.Domain.Entities.Trading.Account", b =>
                 {
                     b.HasOne("OptiX.Domain.Entities.Identity.User", null)
                         .WithMany("Accounts")
@@ -517,18 +526,18 @@ namespace Optix.Infrastructure.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("OptiX.Domain.Entities.User.Trade", b =>
+            modelBuilder.Entity("OptiX.Domain.Entities.Trading.Trade", b =>
                 {
-                    b.HasOne("OptiX.Domain.Entities.User.Account", null)
+                    b.HasOne("OptiX.Domain.Entities.Trading.Account", null)
                         .WithMany("Trades")
                         .HasForeignKey("AccountId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("OptiX.Domain.Entities.User.Transaction", b =>
+            modelBuilder.Entity("OptiX.Domain.Entities.Trading.Transaction", b =>
                 {
-                    b.HasOne("OptiX.Domain.Entities.User.Account", null)
+                    b.HasOne("OptiX.Domain.Entities.Trading.Account", null)
                         .WithMany("Transactions")
                         .HasForeignKey("AccountId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -545,7 +554,7 @@ namespace Optix.Infrastructure.Migrations
                     b.Navigation("Accounts");
                 });
 
-            modelBuilder.Entity("OptiX.Domain.Entities.User.Account", b =>
+            modelBuilder.Entity("OptiX.Domain.Entities.Trading.Account", b =>
                 {
                     b.Navigation("Trades");
 

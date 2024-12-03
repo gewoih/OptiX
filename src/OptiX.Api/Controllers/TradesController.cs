@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using OptiX.Application.Trades.Requests;
 using OptiX.Application.Trades.Services;
@@ -6,6 +7,7 @@ namespace OptiX.Api.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[Authorize]
 public class TradesController : ControllerBase
 {
     private readonly ITradeService _tradeService;

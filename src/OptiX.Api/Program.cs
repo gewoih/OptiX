@@ -8,10 +8,10 @@ using OptiX.Application.Assets.Services;
 using OptiX.Application.Binance;
 using OptiX.Application.MarketData.Services;
 using OptiX.Application.SignalR;
+using OptiX.Application.Trades.Services;
 using OptiX.Application.Users;
 using OptiX.Domain.Entities.Identity;
 using Optix.Infrastructure.Database;
-using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -36,6 +36,8 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAssetService, AssetService>();
 builder.Services.AddScoped<ITicksService, TicksService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
+builder.Services.AddScoped<ITradeService, TradeService>();
 builder.Services.AddHostedService<BinanceMarketDataLoader>();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -81,7 +83,10 @@ await database?.MigrateAsync();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
-    app.MapScalarApiReference();
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint("/openapi/v1.json", "OptiX API");
+    });
 }
 
 app.MapControllers();
