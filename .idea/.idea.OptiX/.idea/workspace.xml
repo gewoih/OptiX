@@ -26,13 +26,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d980ee12-c4dd-4d59-b270-8afe19edf39b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/Users/CurrentUserService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/Users/ICurrentUserService.cs" afterDir="false" />
+    <list default="true" id="d980ee12-c4dd-4d59-b270-8afe19edf39b" name="Changes" comment="feat: CurrentUserService.cs">
+      <change afterPath="$PROJECT_DIR$/src/OptiX.Api/Controllers/TradesController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/Dto/TradeDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/Mappers/TradeMapper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/Requests/CloseTradeRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/Requests/OpenTradeRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/Services/Trades/ITradeService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/Services/Trades/TradeService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OptiX.Domain/ValueObjects/TradeDirection.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OptiX.Domain/ValueObjects/TradeDurationMinutes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OptiX.Domain/ValueObjects/TradeStatus.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OptiX/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OptiX/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Accounts/AccountService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Accounts/AccountService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/optix/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/optix/src/router/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/optix/src/services/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/optix/src/services/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Api/Controllers/AccountsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/Controllers/AccountsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Api/Controllers/AssetsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/Controllers/AssetsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Api/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/Controllers/AuthController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Accounts/AccountDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Dto/AccountDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Accounts/AccountService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Services/Accounts/AccountService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Accounts/IAccountService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Services/Accounts/IAccountService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Accounts/Requests/CreateAccountRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Requests/CreateAccountRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Accounts/Requests/GetAllAccountsRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Requests/GetAllAccountsRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Assets/AssetDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Dto/AssetDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Assets/AssetService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Services/Assets/AssetService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Assets/IAssetService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Services/Assets/IAssetService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Binance/BinanceMarketDataLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Services/Binance/BinanceMarketDataLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/MarketData/ITicksService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Services/MarketData/ITicksService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/MarketData/TickDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Dto/TickDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/MarketData/TicksService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Services/MarketData/TicksService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/OptiX.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/OptiX.Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/SignalR/MarketDataHub.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Services/SignalR/MarketDataHub.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Users/CurrentUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Services/Users/CurrentUserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Users/ICurrentUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Services/Users/ICurrentUserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Users/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Services/Users/IUserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Users/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Services/Users/UserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Trading/Trade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Trading/Trade.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +254,7 @@
       <workItem from="1732894123942" duration="8006000" />
       <workItem from="1732952275943" duration="2078000" />
       <workItem from="1732965671728" duration="20399000" />
-      <workItem from="1733239379595" duration="1200000" />
+      <workItem from="1733239379595" duration="4885000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -316,7 +344,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732990569150</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="feat: CurrentUserService.cs">
+      <option name="closed" value="true" />
+      <created>1733240764676</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1733240764676</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,6 +375,7 @@
     <MESSAGE value="feat: signalrClient.ts and price chart" />
     <MESSAGE value="feat: AccountService.cs" />
     <MESSAGE value="feat: vue app" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: vue app" />
+    <MESSAGE value="feat: CurrentUserService.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: CurrentUserService.cs" />
   </component>
 </project>

@@ -1,12 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using OptiX.Application.Accounts.Requests;
+using OptiX.Application.Accounts.Responses;
 using OptiX.Application.Users;
 using OptiX.Domain.Entities.Trading;
 using OptiX.Domain.ValueObjects;
 using Optix.Infrastructure.Database;
 
-namespace OptiX.Application.Accounts;
+namespace OptiX.Application.Accounts.Services;
 
 public sealed class AccountService : IAccountService
 {

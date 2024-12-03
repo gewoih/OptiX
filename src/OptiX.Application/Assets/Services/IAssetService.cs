@@ -1,4 +1,6 @@
-namespace OptiX.Application.Assets;
+using OptiX.Application.Assets.Responses;
+
+namespace OptiX.Application.Assets.Services;
 
 public interface IAssetService
 {

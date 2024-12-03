@@ -1,4 +1,4 @@
-namespace OptiX.Application.Accounts;
+namespace OptiX.Application.Accounts.Responses;
 
 public class AccountDto
 {

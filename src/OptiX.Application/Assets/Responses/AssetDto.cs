@@ -1,4 +1,4 @@
-namespace OptiX.Application.Assets;
+namespace OptiX.Application.Assets.Responses;
 
 public sealed class AssetDto
 {

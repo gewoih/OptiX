@@ -1,7 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using OptiX.Application.Assets.Responses;
 using Optix.Infrastructure.Database;
 
-namespace OptiX.Application.Assets;
+namespace OptiX.Application.Assets.Services;
 
 public sealed class AssetService : IAssetService
 {

@@ -1,6 +1,6 @@
 using Optix.Infrastructure.Database;
 
-namespace OptiX.Application.MarketData;
+namespace OptiX.Application.MarketData.Services;
 
 public sealed class TicksService : ITicksService
 {
