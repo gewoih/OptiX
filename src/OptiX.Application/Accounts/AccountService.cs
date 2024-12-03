@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using OptiX.Application.Accounts.Requests;
+using OptiX.Application.Users;
 using OptiX.Domain.Entities.Trading;
 using OptiX.Domain.ValueObjects;
 using Optix.Infrastructure.Database;
@@ -11,16 +12,19 @@ public sealed class AccountService : IAccountService
 {
     private readonly AppDbContext _context;
     private readonly IConfiguration _configuration;
+    private readonly ICurrentUserService _currentUserService;
 
-    public AccountService(AppDbContext context, IConfiguration configuration)
+    public AccountService(AppDbContext context, IConfiguration configuration, ICurrentUserService currentUserService)
     {
         _context = context;
         _configuration = configuration;
+        _currentUserService = currentUserService;
     }
 
     public async Task<AccountDto> CreateAsync(CreateAccountRequest request)
     {
         var isDemo = request.IsDemo;
+        var currentUserId = _currentUserService.GetCurrentUserId();
 
         var initialTransactions =
             isDemo
@@ -35,8 +39,9 @@ public sealed class AccountService : IAccountService
                 }
                 : [];
 
-        var newAccount = new Domain.Entities.Trading.Account
+        var newAccount = new Account
         {
+            UserId = currentUserId,
             IsDemo = isDemo,
             Name = request.Name,
             Transactions = initialTransactions,
@@ -56,7 +61,8 @@ public sealed class AccountService : IAccountService
 
     public async Task<List<AccountDto>> GetAllAsync(GetAllAccountsRequest request)
     {
-        var getAccountsQuery = _context.Accounts.AsQueryable();
+        var currentUserId = _currentUserService.GetCurrentUserId();
+        var getAccountsQuery = _context.Accounts.Where(account => account.UserId == currentUserId);
 
         if (request.DemoAccountsOnly)
             getAccountsQuery = getAccountsQuery.Where(account => account.IsDemo);
