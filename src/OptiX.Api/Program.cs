@@ -10,7 +10,7 @@ using OptiX.Application.Binance;
 using OptiX.Application.SignalR;
 using OptiX.Application.Ticks.Services;
 using OptiX.Application.Trades.Services;
-using OptiX.Application.Users;
+using OptiX.Application.Transactions.Services;
 using OptiX.Application.Users.Services;
 using OptiX.Domain.Entities.Identity;
 using Optix.Infrastructure.Database;
@@ -39,6 +39,7 @@ builder.Services.AddScoped<ITickService, TickService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
 builder.Services.AddScoped<ITradeService, TradeService>();
+builder.Services.AddScoped<ITransactionService, TransactionService>();
 builder.Services.AddHostedService<BinanceMarketDataLoader>();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");

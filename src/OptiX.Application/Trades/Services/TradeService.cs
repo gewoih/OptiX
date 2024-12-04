@@ -2,7 +2,10 @@ using OptiX.Application.Ticks.Services;
 using OptiX.Application.Trades.Mappers;
 using OptiX.Application.Trades.Requests;
 using OptiX.Application.Trades.Responses;
+using OptiX.Application.Transactions.Requests;
+using OptiX.Application.Transactions.Services;
 using OptiX.Domain.Entities.Trading;
+using OptiX.Domain.ValueObjects;
 using Optix.Infrastructure.Database;
 
 namespace OptiX.Application.Trades.Services;
@@ -11,11 +14,13 @@ public sealed class TradeService : ITradeService
 {
     private readonly AppDbContext _context;
     private readonly ITickService _tickService;
+    private readonly ITransactionService _transactionService;
 
-    public TradeService(AppDbContext context, ITickService tickService)
+    public TradeService(AppDbContext context, ITickService tickService, ITransactionService transactionService)
     {
         _context = context;
         _tickService = tickService;
+        _transactionService = transactionService;
     }
 
     public async Task<TradeDto?> OpenTradeAsync(OpenTradeRequest request)
@@ -23,12 +28,30 @@ public sealed class TradeService : ITradeService
         var lastTick = await _tickService.GetLastTickAsync(request.AssetId);
         if (lastTick == null)
             return null;
-        
-        var trade = new Trade(request.AccountId, request.AssetId, request.Direction, request.DurationMinutes, request.Amount, lastTick.Price);
-        await _context.Trades.AddAsync(trade);
-        await _context.SaveChangesAsync();
 
-        return trade.ToDto();
+        await using var transaction = await _context.Database.BeginTransactionAsync();
+
+        try
+        {
+            var trade = new Trade(request.AccountId, request.AssetId, request.Direction, request.DurationMinutes,
+                request.Amount, lastTick.Price);
+            var tradeTransaction =
+                new CreateTransactionRequest(request.AccountId, TransactionTrigger.TradeOpening, -trade.OpenSum);
+
+            await _transactionService.CreateTransactionAsync(tradeTransaction);
+            
+            await _context.Trades.AddAsync(trade);
+            await _context.SaveChangesAsync();
+
+            await transaction.CommitAsync();
+            
+            return trade.ToDto();
+        }
+        catch (Exception ex)
+        {
+            await transaction.RollbackAsync();
+            throw;
+        }
     }
 
     public async Task<TradeDto?> CloseTradeAsync(CloseTradeRequest request)
@@ -36,13 +59,29 @@ public sealed class TradeService : ITradeService
         var trade = await _context.Trades.FindAsync(request.TradeId);
         if (trade is null)
             return null;
-        
+
         var lastTick = await _tickService.GetLastTickAsync(trade.AssetId);
         if (lastTick == null)
             return null;
-        
-        trade.Close(lastTick.Price);
-        await _context.SaveChangesAsync();
+
+        await using var transaction = await _context.Database.BeginTransactionAsync();
+        try
+        {
+            trade.Close(lastTick.Price);
+            
+            var tradeTransactionRequest = new CreateTransactionRequest(trade.AccountId, TransactionTrigger.TradeClosing, trade.CloseSum);
+            var commissionTransactionRequest = new CreateTransactionRequest(trade.AccountId, TransactionTrigger.Commission, -trade.Commission);
+            await _transactionService.CreateTransactionAsync(tradeTransactionRequest);
+            await _transactionService.CreateTransactionAsync(commissionTransactionRequest);
+            
+            await _context.SaveChangesAsync();
+            await transaction.CommitAsync();
+        }
+        catch (Exception ex)
+        {
+            await transaction.RollbackAsync();
+            throw;
+        }
 
         return trade.ToDto();
     }

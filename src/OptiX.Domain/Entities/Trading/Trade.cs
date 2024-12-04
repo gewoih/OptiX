@@ -16,6 +16,8 @@ public sealed class Trade : Entity
     public decimal ClosePrice { get; set; }
     public decimal Commission { get; set; }
     public decimal? Profit { get; set; }
+    public decimal OpenSum => OpenPrice * Amount;
+    public decimal CloseSum => ClosePrice * Amount;
 
     public Trade()
     {
