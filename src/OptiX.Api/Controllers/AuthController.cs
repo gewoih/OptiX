@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using OptiX.Application.Users;
+using OptiX.Application.Users.Services;
 
 namespace OptiX.Api.Controllers
 {

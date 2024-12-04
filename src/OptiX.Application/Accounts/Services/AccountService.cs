@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using OptiX.Application.Accounts.Requests;
 using OptiX.Application.Accounts.Responses;
 using OptiX.Application.Users;
+using OptiX.Application.Users.Services;
 using OptiX.Domain.Entities.Trading;
 using OptiX.Domain.ValueObjects;
 using Optix.Infrastructure.Database;

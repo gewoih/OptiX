@@ -11,6 +11,7 @@ using OptiX.Application.SignalR;
 using OptiX.Application.Ticks.Services;
 using OptiX.Application.Trades.Services;
 using OptiX.Application.Users;
+using OptiX.Application.Users.Services;
 using OptiX.Domain.Entities.Identity;
 using Optix.Infrastructure.Database;
 

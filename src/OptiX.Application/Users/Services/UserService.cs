@@ -8,7 +8,7 @@ using Microsoft.IdentityModel.Tokens;
 using OptiX.Domain.Entities.Identity;
 using OptiX.Domain.Entities.User;
 
-namespace OptiX.Application.Users;
+namespace OptiX.Application.Users.Services;
 
 public class UserService : IUserService
 {

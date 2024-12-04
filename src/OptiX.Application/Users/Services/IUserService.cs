@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Authentication;
 
-namespace OptiX.Application.Users;
+namespace OptiX.Application.Users.Services;
 
 public interface IUserService
 {

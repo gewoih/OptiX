@@ -26,19 +26,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d980ee12-c4dd-4d59-b270-8afe19edf39b" name="Changes" comment="feat: init migration">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.OptiX/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OptiX/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Api/Controllers/TradesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/Controllers/TradesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Binance/BinanceMarketDataLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Binance/BinanceMarketDataLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/MarketData/Services/ITicksService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Ticks/Services/ITickService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/MarketData/Services/TicksService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Ticks/Services/TickService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/MarketData/TickDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Ticks/TickDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Trades/Mappers/TradeMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Trades/Mappers/TradeMapper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Trades/Services/ITradeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Trades/Services/ITradeService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Trades/Services/TradeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Trades/Services/TradeService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Trading/Trade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Trading/Trade.cs" afterDir="false" />
-    </list>
+    <list default="true" id="d980ee12-c4dd-4d59-b270-8afe19edf39b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,13 +70,20 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e6c5b3f44fd4d4636546069e03625a3c46d75b5c73de150703fe0dbfd1bc9/ConstructorBindingFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f6f937e7fde51c3ca061c59112cdd35b76a72e9ef8821ac361c6ef71e90ea88/ControllerEndpointRouteBuilderExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/OptiX.Api/Controllers/AssetsController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/OptiX.Api/Controllers/TradesController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/OptiX.Api/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/OptiX.Application/Binance/BinanceMarketDataLoader.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/OptiX.Application/Binance/BinanceMarketDataLoader.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/OptiX.Application/MarketData/Services/ITicksService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/OptiX.Application/MarketData/Services/TicksService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/OptiX.Application/MarketData/TickDto.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/OptiX.Application/Trades/Mappers/TradeMapper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/OptiX.Application/Trades/Services/ITradeService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/OptiX.Application/Trades/Services/TradeService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/OptiX.Application/Users/IUserService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/OptiX.Application/Users/UserService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/OptiX.Domain/Entities/Asset/Tick.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/OptiX.Domain/Entities/Trading/Trade.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -235,7 +230,7 @@
       <workItem from="1733245050810" duration="543000" />
       <workItem from="1733245610360" duration="42000" />
       <workItem from="1733245663765" duration="1087000" />
-      <workItem from="1733301946217" duration="5518000" />
+      <workItem from="1733301946217" duration="5787000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -373,7 +368,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733306138269</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="feat: trade closing + GetLastTickAsync()">
+      <option name="closed" value="true" />
+      <created>1733307750629</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1733307750629</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,6 +405,7 @@
     <MESSAGE value="feat: migrations re-init, new endpoints added, trades opening fixed" />
     <MESSAGE value="feat: saving marketData every 1 sec" />
     <MESSAGE value="feat: init migration" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: init migration" />
+    <MESSAGE value="feat: trade closing + GetLastTickAsync()" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: trade closing + GetLastTickAsync()" />
   </component>
 </project>

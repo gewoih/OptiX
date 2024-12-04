@@ -1,7 +1,7 @@
 using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
 
-namespace OptiX.Application.Users;
+namespace OptiX.Application.Users.Services;
 
 public sealed class CurrentUserService : ICurrentUserService
 {
