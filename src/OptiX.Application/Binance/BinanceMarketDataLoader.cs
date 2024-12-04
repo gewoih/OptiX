@@ -1,3 +1,4 @@
+using System.Collections.Concurrent;
 using Binance.Net.Clients;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,6 +13,8 @@ namespace OptiX.Application.Binance;
 public sealed class BinanceMarketDataLoader : BackgroundService
 {
     private readonly BinanceSocketClient _binanceSocketClient;
+    private readonly DateTime _ticksLastSavedAt;
+    private readonly ConcurrentBag<TickDto> _ticksToSave;
     private readonly IHubContext<MarketDataHub> _hubContext;
     private readonly IServiceProvider _serviceProvider;
 
@@ -20,6 +23,8 @@ public sealed class BinanceMarketDataLoader : BackgroundService
         _binanceSocketClient = new BinanceSocketClient();
         _serviceProvider = serviceProvider;
         _hubContext = hubContext;
+        _ticksToSave = [];
+        _ticksLastSavedAt = DateTime.UtcNow;
     }
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -43,12 +48,20 @@ public sealed class BinanceMarketDataLoader : BackgroundService
                 var assetId = symbolsAndAssetIds[update.Symbol];
                 var tick = new TickDto
                 {
+                    AssetId = assetId,
                     DateTime = update.Data.TradeTime,
                     Volume = update.Data.Quantity,
                     Price = update.Data.Price
                 };
+                
+                _ticksToSave.Add(tick);
 
-                await ticksService.SaveAsync(assetId, [tick]);
+                var timeSinceLastSaved = DateTime.UtcNow - _ticksLastSavedAt;
+                if (timeSinceLastSaved >= TimeSpan.FromSeconds(1))
+                {
+                    await ticksService.SaveAsync(_ticksToSave);
+                    _ticksToSave.Clear();
+                }
                 
                 await _hubContext.Clients.Group(update.Symbol).SendAsync("ReceiveMarketData", tick, cancellationToken: stoppingToken);
             }, stoppingToken);

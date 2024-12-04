@@ -26,21 +26,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d980ee12-c4dd-4d59-b270-8afe19edf39b" name="Changes" comment="">
+    <list default="true" id="d980ee12-c4dd-4d59-b270-8afe19edf39b" name="Changes" comment="feat: migrations re-init, new endpoints added, trades opening fixed">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OptiX/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OptiX/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Api/Controllers/AccountsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/Controllers/AccountsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Api/Controllers/AssetsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/Controllers/AssetsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Api/OptiX.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/OptiX.Api.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Accounts/Services/AccountService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Accounts/Services/AccountService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Accounts/Services/IAccountService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Accounts/Services/IAccountService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Trades/Services/TradeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Trades/Services/TradeService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Trading/Trade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Trading/Trade.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/20241130074630_Initial.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/20241130074630_Initial.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/20241130152847_Init2.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/20241130152847_Init2.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Binance/BinanceMarketDataLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Binance/BinanceMarketDataLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/MarketData/Services/ITicksService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/MarketData/Services/ITicksService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/MarketData/Services/TicksService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/MarketData/Services/TicksService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/MarketData/TickDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/MarketData/TickDto.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +75,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ce37be1a06b16c6faa02038d2cc477dd3bca5b217ceeb41c5f2ad45c1bf9/ServiceProvider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e6c5b3f44fd4d4636546069e03625a3c46d75b5c73de150703fe0dbfd1bc9/ConstructorBindingFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f6f937e7fde51c3ca061c59112cdd35b76a72e9ef8821ac361c6ef71e90ea88/ControllerEndpointRouteBuilderExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/OptiX.Api/Controllers/AssetsController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/OptiX.Application/Users/IUserService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/OptiX.Application/Users/UserService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/OptiX.Domain/Entities/Asset/Tick.cs" root0="FORCE_HIGHLIGHTING" />
@@ -233,7 +225,7 @@
       <workItem from="1733245050810" duration="543000" />
       <workItem from="1733245610360" duration="42000" />
       <workItem from="1733245663765" duration="1087000" />
-      <workItem from="1733301946217" duration="3017000" />
+      <workItem from="1733301946217" duration="3883000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -347,7 +339,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733246756105</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="feat: migrations re-init, new endpoints added, trades opening fixed">
+      <option name="closed" value="true" />
+      <created>1733305232339</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1733305232339</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,6 +373,7 @@
     <MESSAGE value="feat: CurrentUserService.cs" />
     <MESSAGE value="feat: TradeService.cs + solution refactor" />
     <MESSAGE value="feat: authorize attributes, swaggerUi, services registration" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: authorize attributes, swaggerUi, services registration" />
+    <MESSAGE value="feat: migrations re-init, new endpoints added, trades opening fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: migrations re-init, new endpoints added, trades opening fixed" />
   </component>
 </project>

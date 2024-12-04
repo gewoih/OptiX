@@ -11,11 +11,11 @@ public sealed class TicksService : ITicksService
         _context = context;
     }
 
-    public async Task SaveAsync(Guid assetId, IEnumerable<TickDto> ticks)
+    public async Task SaveAsync(IEnumerable<TickDto> ticks)
     {
         var marketDataToSave = ticks.Select(marketData => new Domain.Entities.Asset.Tick
         {
-            AssetId = assetId,
+            AssetId = marketData.AssetId,
             Price = marketData.Price,
             Volume = marketData.Volume,
             Date = marketData.DateTime
