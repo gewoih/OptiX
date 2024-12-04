@@ -2,7 +2,10 @@ namespace OptiX.Domain.ValueObjects;
 
 public enum TransactionTrigger
 {
-    PromoCodeActivation = 0,
-    Trade = 1,
-    DemoAccountInitialization = 2
+    Deposit,
+    Withdrawal,
+    TradeOpening,
+    TradeClosing,
+    PromoCodeActivation,
+    DemoAccountInitialization
 }
