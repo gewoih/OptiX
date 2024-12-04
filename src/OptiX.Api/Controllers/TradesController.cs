@@ -21,7 +21,20 @@ public class TradesController : ControllerBase
     public async Task<IActionResult> Post([FromBody] OpenTradeRequest request)
     {
         var openedTrade = await _tradeService.OpenTradeAsync(request);
+        if (openedTrade == null)
+            return BadRequest();
+        
         return CreatedAtAction(nameof(Get), new { id = openedTrade.Id }, openedTrade);
+    }
+
+    [HttpPatch]
+    public async Task<IActionResult> Patch([FromBody] CloseTradeRequest request)
+    {
+        var trade = await _tradeService.CloseTradeAsync(request);
+        if (trade is null)
+            return NotFound();
+        
+        return Ok(trade);
     }
 
     [HttpGet("{id}")]

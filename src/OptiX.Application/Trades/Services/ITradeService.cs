@@ -5,7 +5,7 @@ namespace OptiX.Application.Trades.Services;
 
 public interface ITradeService
 {
-    Task<TradeDto> OpenTradeAsync(OpenTradeRequest request);
-    Task<TradeDto> CloseTradeAsync(CloseTradeRequest request);
+    Task<TradeDto?> OpenTradeAsync(OpenTradeRequest request);
+    Task<TradeDto?> CloseTradeAsync(CloseTradeRequest request);
     Task<TradeDto?> GetAsync(Guid id);
 }

@@ -38,7 +38,7 @@ public sealed class Trade : Entity
     {
         ClosePrice = closePrice;
         Status = TradeStatus.Closed;
-        Commission = (OpenPrice + ClosePrice) * Amount * 0.05m;
+        Commission = (OpenPrice + ClosePrice) * Amount * 0.001m;
         Profit = GetProfit();
     }
 

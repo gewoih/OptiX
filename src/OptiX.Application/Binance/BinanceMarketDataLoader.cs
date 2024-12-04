@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using OptiX.Application.Assets.Services;
-using OptiX.Application.MarketData;
-using OptiX.Application.MarketData.Services;
 using OptiX.Application.SignalR;
+using OptiX.Application.Ticks;
+using OptiX.Application.Ticks.Services;
 
 namespace OptiX.Application.Binance;
 
@@ -43,7 +43,7 @@ public sealed class BinanceMarketDataLoader : BackgroundService
             symbolsToSubscribe, async update =>
             {
                 using var scope = _serviceProvider.CreateScope();
-                var ticksService = scope.ServiceProvider.GetRequiredService<ITicksService>();
+                var ticksService = scope.ServiceProvider.GetRequiredService<ITickService>();
                 
                 var assetId = symbolsAndAssetIds[update.Symbol];
                 var tick = new TickDto
