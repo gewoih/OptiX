@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using OptiX.Application.Accounts.Services;
 using OptiX.Application.Assets.Services;
 using OptiX.Application.Binance;
@@ -15,7 +16,6 @@ using Optix.Infrastructure.Database;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddOpenApi();
 builder.Services.AddControllers();
 
 builder.Services.AddSignalR();
@@ -23,7 +23,7 @@ builder.Services.AddSignalR();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: "Frontend",
-        policy  =>
+        policy =>
         {
             policy.WithOrigins("http://localhost:8080", "https://localhost:8080")
                 .AllowAnyHeader()
@@ -72,6 +72,36 @@ builder.Services.AddAuthentication(options =>
         };
     });
 
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "OptiX API", Version = "v1" });
+
+    c.AddSecurityDefinition(JwtBearerDefaults.AuthenticationScheme, new OpenApiSecurityScheme
+    {
+        Description = "Enter the JWT",
+        Name = "Authorization",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.Http,
+        BearerFormat = "JWT",
+        Scheme = JwtBearerDefaults.AuthenticationScheme,
+    });
+
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = JwtBearerDefaults.AuthenticationScheme
+                },
+            },
+            new List<string>()
+        }
+    });
+});
+
 var app = builder.Build();
 
 app.UseCors("Frontend");
@@ -82,12 +112,12 @@ await database?.MigrateAsync();
 
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
-    app.UseSwaggerUI(options =>
-    {
-        options.SwaggerEndpoint("/openapi/v1.json", "OptiX API");
-    });
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
 app.UseHttpsRedirection();

@@ -28,14 +28,19 @@
   <component name="ChangeListManager">
     <list default="true" id="d980ee12-c4dd-4d59-b270-8afe19edf39b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OptiX/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OptiX/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OptiX.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/OptiX.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OptiX.Api/Controllers/AccountsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/Controllers/AccountsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Api/Controllers/TradesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/Controllers/TradesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Api/Controllers/AssetsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/Controllers/AssetsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OptiX.Api/OptiX.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/OptiX.Api.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OptiX.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Trades/Mappers/TradeMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Trades/Mappers/TradeMapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Accounts/Services/AccountService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Accounts/Services/AccountService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Accounts/Services/IAccountService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Accounts/Services/IAccountService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Trades/Services/TradeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Trades/Services/TradeService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Trading/Trade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Trading/Trade.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/20241130074630_Initial.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/20241130074630_Initial.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/20241130152847_Init2.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/20241130152847_Init2.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +232,8 @@
       <workItem from="1733239379595" duration="5635000" />
       <workItem from="1733245050810" duration="543000" />
       <workItem from="1733245610360" duration="42000" />
-      <workItem from="1733245663765" duration="989000" />
+      <workItem from="1733245663765" duration="1087000" />
+      <workItem from="1733301946217" duration="3017000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -333,7 +339,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733244702497</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="feat: authorize attributes, swaggerUi, services registration">
+      <option name="closed" value="true" />
+      <created>1733246756105</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1733246756105</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,6 +372,7 @@
     <MESSAGE value="feat: vue app" />
     <MESSAGE value="feat: CurrentUserService.cs" />
     <MESSAGE value="feat: TradeService.cs + solution refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: TradeService.cs + solution refactor" />
+    <MESSAGE value="feat: authorize attributes, swaggerUi, services registration" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: authorize attributes, swaggerUi, services registration" />
   </component>
 </project>

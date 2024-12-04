@@ -17,7 +17,7 @@ public sealed class TradeService : ITradeService
 
     public async Task<TradeDto> OpenTradeAsync(OpenTradeRequest request)
     {
-        var trade = new Trade(request.AccountId, request.Direction, request.DurationMinutes, request.Amount, 0);
+        var trade = new Trade(request.AccountId, request.AccountId, request.Direction, request.DurationMinutes, request.Amount, 0);
         await _context.Trades.AddAsync(trade);
         await _context.SaveChangesAsync();
 

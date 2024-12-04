@@ -21,9 +21,10 @@ public sealed class Trade : Entity
     {
     }
 
-    public Trade(Guid assetId, TradeDirection direction, TradeDurationMinutes durationMinutes, decimal amount,
+    public Trade(Guid accountId, Guid assetId, TradeDirection direction, TradeDurationMinutes durationMinutes, decimal amount,
         decimal openPrice)
     {
+        AccountId = accountId;
         AssetId = assetId;
         Direction = direction;
         OpenedAt = DateTime.UtcNow;

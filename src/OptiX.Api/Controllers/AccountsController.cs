@@ -20,14 +20,21 @@ namespace OptiX.Api.Controllers
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] CreateAccountRequest request)
         {
-            await _accountService.CreateAsync(request);
-            return Ok();
+            var createdAccount = await _accountService.CreateAsync(request);
+            return CreatedAtAction(nameof(Get), new { id = createdAccount.Id }, createdAccount);
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get([FromQuery] GetAllAccountsRequest request)
+        public async Task<IActionResult> GetAll([FromQuery] GetAllAccountsRequest request)
         {
             var accounts = await _accountService.GetAllAsync(request);
+            return Ok(accounts);
+        }
+        
+        [HttpGet("{id:guid}")]
+        public async Task<IActionResult> Get([FromRoute] Guid id)
+        {
+            var accounts = await _accountService.GetAsync(id);
             return Ok(accounts);
         }
     }

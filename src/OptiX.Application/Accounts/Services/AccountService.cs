@@ -80,4 +80,18 @@ public sealed class AccountService : IAccountService
 
         return accounts;
     }
+
+    public async Task<AccountDto?> GetAsync(Guid id)
+    {
+        var account = await _context.Accounts.FindAsync(id);
+        if (account is null)
+            return null;
+
+        return new AccountDto
+        {
+            Id = account.Id,
+            Name = account.Name,
+            IsDemo = account.IsDemo,
+        };
+    }
 }
