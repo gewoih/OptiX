@@ -10,6 +10,7 @@ public sealed class Trade : Entity
     public TradeStatus Status { get; set; }
     public DateTime OpenedAt { get; set; }
     public DateTime ClosedAt { get; set; }
+    public DateTime PlannedClosingDate { get; set; }
     public TradeDirection Direction { get; set; }
     public decimal Amount { get; set; }
     public decimal OpenPrice { get; set; }
@@ -30,7 +31,7 @@ public sealed class Trade : Entity
         AssetId = assetId;
         Direction = direction;
         OpenedAt = DateTime.UtcNow;
-        ClosedAt = OpenedAt.AddMinutes((int)durationMinutes);
+        PlannedClosingDate = OpenedAt.AddMinutes((int)durationMinutes);
         Status = TradeStatus.Opened;
         Amount = amount;
         OpenPrice = openPrice;
@@ -38,6 +39,7 @@ public sealed class Trade : Entity
 
     public void Close(decimal closePrice)
     {
+        ClosedAt = DateTime.UtcNow;
         ClosePrice = closePrice;
         Status = TradeStatus.Closed;
         Commission = (OpenPrice + ClosePrice) * Amount * 0.001m;

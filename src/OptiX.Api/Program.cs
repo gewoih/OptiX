@@ -1,4 +1,5 @@
 using System.Text;
+using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,7 @@ using OptiX.Application.Assets.Services;
 using OptiX.Application.Binance;
 using OptiX.Application.SignalR;
 using OptiX.Application.Ticks.Services;
+using OptiX.Application.Trades.Messaging;
 using OptiX.Application.Trades.Services;
 using OptiX.Application.Transactions.Services;
 using OptiX.Application.Users.Services;
@@ -41,6 +43,25 @@ builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
 builder.Services.AddScoped<ITradeService, TradeService>();
 builder.Services.AddScoped<ITransactionService, TransactionService>();
 builder.Services.AddHostedService<BinanceMarketDataLoader>();
+
+builder.Services.AddMassTransit(options =>
+{
+    options.AddDelayedMessageScheduler();
+    options.UsingRabbitMq((context, cfg) =>
+    {
+        cfg.Host("rabbitmq://localhost", h =>
+        {
+            h.Username("guest");
+            h.Password("guest");
+        });
+        
+        cfg.UseDelayedMessageScheduler();
+
+        cfg.ConfigureEndpoints(context);
+    });
+
+    options.AddConsumer<CloseTradeConsumer>();
+});
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(connectionString));

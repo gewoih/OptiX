@@ -1,3 +1,4 @@
+using MassTransit;
 using OptiX.Application.Ticks.Services;
 using OptiX.Application.Trades.Mappers;
 using OptiX.Application.Trades.Requests;
@@ -15,12 +16,14 @@ public sealed class TradeService : ITradeService
     private readonly AppDbContext _context;
     private readonly ITickService _tickService;
     private readonly ITransactionService _transactionService;
+    private readonly IMessageScheduler _messageScheduler;
 
-    public TradeService(AppDbContext context, ITickService tickService, ITransactionService transactionService)
+    public TradeService(AppDbContext context, ITickService tickService, ITransactionService transactionService, IMessageScheduler messageScheduler)
     {
         _context = context;
         _tickService = tickService;
         _transactionService = transactionService;
+        _messageScheduler = messageScheduler;
     }
 
     public async Task<TradeDto?> OpenTradeAsync(OpenTradeRequest request)
@@ -31,18 +34,19 @@ public sealed class TradeService : ITradeService
 
         await using var transaction = await _context.Database.BeginTransactionAsync();
 
+        var trade = new Trade(request.AccountId, request.AssetId, request.Direction, request.DurationMinutes,
+            request.Amount, lastTick.Price);
+        var tradeTransaction =
+            new CreateTransactionRequest(request.AccountId, TransactionTrigger.TradeOpening, -trade.OpenSum);
+        
         try
         {
-            var trade = new Trade(request.AccountId, request.AssetId, request.Direction, request.DurationMinutes,
-                request.Amount, lastTick.Price);
-            var tradeTransaction =
-                new CreateTransactionRequest(request.AccountId, TransactionTrigger.TradeOpening, -trade.OpenSum);
-
             await _transactionService.CreateTransactionAsync(tradeTransaction);
             
             await _context.Trades.AddAsync(trade);
+            await _messageScheduler.SchedulePublish(trade.PlannedClosingDate, new CloseTradeRequest(trade.Id));
+            
             await _context.SaveChangesAsync();
-
             await transaction.CommitAsync();
             
             return trade.ToDto();
