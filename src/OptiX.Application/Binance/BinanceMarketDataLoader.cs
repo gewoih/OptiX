@@ -3,8 +3,6 @@ using Binance.Net.Clients;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using OptiX.Application.Assets.Services;
-using OptiX.Application.MarketData;
 using OptiX.Application.MarketData.Responses;
 using OptiX.Application.MarketData.Services;
 using OptiX.Application.SignalR;
@@ -30,16 +28,7 @@ public sealed class BinanceMarketDataLoader : BackgroundService
     {
         var saveTicksTask = SaveTicksAsync(stoppingToken);
         var broadcastTicksTask = BroadcastTicksAsync(stoppingToken);
-
-        using var scope = _serviceProvider.CreateScope();
-        var assetService = scope.ServiceProvider.GetRequiredService<IAssetService>();
-
-        var assets = await assetService.GetAllAsync();
-        var symbolsToSubscribe = assets.Select(asset => asset.Symbol).ToList();
-        var symbolsAndAssetIds = assets.ToDictionary(key => key.Symbol, value => value.Id);
-
-        if (!symbolsAndAssetIds.Any())
-            return;
+        var symbolsToSubscribe = new List<string> { "BTCUSDT" };
 
         var subscriptionResult = await _binanceSocketClient.SpotApi.ExchangeData.SubscribeToTradeUpdatesAsync(
             symbolsToSubscribe, async update =>
@@ -47,13 +36,11 @@ public sealed class BinanceMarketDataLoader : BackgroundService
                 if (string.IsNullOrEmpty(update.Symbol))
                     return;
 
-                if (!symbolsAndAssetIds.TryGetValue(update.Symbol, out var assetId)) 
-                    return;
-                
                 var tick = new TickDto
                 {
-                    AssetId = assetId,
-                    DateTime = update.Data.TradeTime,
+                    Id = update.Data.Id,
+                    Symbol = update.Symbol,
+                    TimeStamp = update.Data.TradeTime.Ticks,
                     Volume = update.Data.Quantity,
                     Price = update.Data.Price,
                 };
@@ -108,7 +95,7 @@ public sealed class BinanceMarketDataLoader : BackgroundService
             {
                 try
                 {
-                    await _hubContext.Clients.Group(tick.AssetId.ToString())
+                    await _hubContext.Clients.Group(tick.Symbol)
                         .SendAsync("ReceiveMarketData", tick, cancellationToken: stoppingToken);
                 }
                 catch (Exception ex)

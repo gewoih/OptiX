@@ -26,19 +26,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d980ee12-c4dd-4d59-b270-8afe19edf39b" name="Changes" comment="refactor">
-      <change afterPath="$PROJECT_DIR$/src/OptiX.Api/Controllers/MarketDataController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/MarketData/Requests/GetMarketDataRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/MarketData/Responses/PriceCandleDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OptiX.Domain/ValueObjects/TimeFrame.cs" afterDir="false" />
+    <list default="true" id="d980ee12-c4dd-4d59-b270-8afe19edf39b" name="Changes" comment="feat: get marketData endpoint">
+      <change afterPath="$PROJECT_DIR$/src/Optix.Infrastructure/Database/DatabaseSeeder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OptiX/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OptiX/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OptiX.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/OptiX.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Api/Controllers/AssetsController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Assets/Mappers/AssetMapper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Assets/Requests/CreateAssetRequest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Assets/Responses/AssetDto.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Assets/Services/AssetService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Assets/Services/IAssetService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Binance/BinanceMarketDataLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Binance/BinanceMarketDataLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/MarketData/Requests/GetMarketDataRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/MarketData/Requests/GetMarketDataRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/MarketData/Responses/TickDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/MarketData/Responses/TickDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OptiX.Application/MarketData/Services/IMarketDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/MarketData/Services/IMarketDataService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OptiX.Application/MarketData/Services/MarketDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/MarketData/Services/MarketDataService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/MarketData/TickDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/MarketData/Responses/TickDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/OptiX.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/OptiX.Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Trades/Requests/OpenTradeRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Trades/Requests/OpenTradeRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Trades/Services/TradeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Trades/Services/TradeService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Asset/Asset.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Asset/Tick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Asset/Tick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Trading/Trade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Trading/Trade.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Database/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Optix.Infrastructure/Database/AppDbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Optix.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Optix.Infrastructure/Optix.Infrastructure.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +104,9 @@
     <setting file="file://$PROJECT_DIR$/src/OptiX.Application/Users/Services/IUserService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/OptiX.Application/Users/Services/UserService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/OptiX.Domain/Entities/Asset/Tick.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/Optix.Infrastructure/Database/AppDbContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/Optix.Infrastructure/Database/AppDbContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/Optix.Infrastructure/Migrations/AppDbContextModelSnapshot.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -242,7 +256,8 @@
       <workItem from="1733301946217" duration="5787000" />
       <workItem from="1733327132036" duration="1755000" />
       <workItem from="1733421798823" duration="44000" />
-      <workItem from="1733474378710" duration="2345000" />
+      <workItem from="1733474378710" duration="5948000" />
+      <workItem from="1733480962174" duration="1168000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -412,7 +427,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733474744916</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="feat: get marketData endpoint">
+      <option name="closed" value="true" />
+      <created>1733477076290</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1733477076290</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,23 +468,37 @@
     <MESSAGE value="feat: AssetService.cs updated, AssetMapper.cs implemented" />
     <MESSAGE value="feat: automatic trades closing implemented" />
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="feat: get marketData endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: get marketData endpoint" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/src/OptiX.Application/MarketData/Services/MarketDataService.cs</url>
-          <line>53</line>
+          <line>65</line>
           <properties documentPath="C:\Users\nrane\Desktop\Projects\OptiX\src\OptiX.Application\MarketData\Services\MarketDataService.cs" containingFunctionPresentation="Method 'GetPriceCandlesAsync'">
             <startOffsets>
-              <option value="1611" />
+              <option value="2030" />
             </startOffsets>
             <endOffsets>
-              <option value="1805" />
+              <option value="2076" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/OptiX.Api/Program.cs</url>
+          <line>135</line>
+          <properties documentPath="C:\Users\nrane\Desktop\Projects\OptiX\src\OptiX.Api\Program.cs" containingFunctionPresentation="">
+            <startOffsets>
+              <option value="4421" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4473" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

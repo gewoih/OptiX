@@ -12,13 +12,19 @@ public sealed class AppDbContext : IdentityDbContext<User, Role, Guid>
 {
     public DbSet<UserProfile> UserProfiles { get; set; }
     public DbSet<Account> Accounts { get; set; }
-    public DbSet<Asset> Assets { get; set; }
     public DbSet<Tick> Ticks { get; set; }
     public DbSet<Trade> Trades { get; set; }
     public DbSet<Transaction> Transactions { get; set; }
 
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
+    }
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        base.OnModelCreating(builder);
+
+        builder.Entity<Tick>().HasIndex(t => new { t.Symbol, UnixDate = t.TimeStamp });
     }
 
     public override int SaveChanges()

@@ -28,13 +28,13 @@ public sealed class TradeService : ITradeService
 
     public async Task<TradeDto?> OpenTradeAsync(OpenTradeRequest request)
     {
-        var lastTick = await _marketDataService.GetLastTickAsync(request.AssetId);
+        var lastTick = await _marketDataService.GetLastTickAsync(request.Symbol);
         if (lastTick == null)
             return null;
 
         await using var transaction = await _context.Database.BeginTransactionAsync();
 
-        var trade = new Trade(request.AccountId, request.AssetId, request.Direction, request.DurationMinutes,
+        var trade = new Trade(request.AccountId, request.Symbol, request.Direction, request.DurationMinutes,
             request.Amount, lastTick.Price);
         var tradeTransaction =
             new CreateTransactionRequest(request.AccountId, TransactionTrigger.TradeOpening, -trade.OpenSum);
@@ -64,7 +64,7 @@ public sealed class TradeService : ITradeService
         if (trade is null)
             return null;
 
-        var lastTick = await _marketDataService.GetLastTickAsync(trade.AssetId);
+        var lastTick = await _marketDataService.GetLastTickAsync(trade.Symbol);
         if (lastTick == null)
             return null;
 

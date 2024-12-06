@@ -18,29 +18,30 @@ public sealed class MarketDataService : IMarketDataService
 
     public async Task SaveAsync(IEnumerable<TickDto> ticks)
     {
-        var marketDataToSave = ticks.Select(marketData => new Domain.Entities.Asset.Tick
+        var marketDataToSave = ticks.Select(tick => new Tick
         {
-            AssetId = marketData.AssetId,
-            Price = marketData.Price,
-            Volume = marketData.Volume,
-            Date = marketData.DateTime
+            Id = tick.Id,
+            Symbol = tick.Symbol,
+            Price = tick.Price,
+            Volume = tick.Volume,
+            TimeStamp = tick.TimeStamp
         });
 
         await _context.Ticks.AddRangeAsync(marketDataToSave);
         await _context.SaveChangesAsync();
     }
 
-    public async Task<TickDto?> GetLastTickAsync(Guid assetId)
+    public async Task<TickDto?> GetLastTickAsync(string symbol)
     {
         var lastTick = await _context.Ticks
-            .Where(tick => tick.AssetId == assetId)
-            .OrderByDescending(tick => tick.Date)
+            .Where(tick => tick.Symbol == symbol)
+            .OrderByDescending(tick => tick.TimeStamp)
             .Select(tick => new TickDto
             {
-                AssetId = tick.AssetId,
+                Symbol = tick.Symbol,
                 Price = tick.Price,
                 Volume = tick.Volume,
-                DateTime = tick.Date
+                TimeStamp = tick.TimeStamp
             })
             .FirstOrDefaultAsync();
 
@@ -49,12 +50,18 @@ public sealed class MarketDataService : IMarketDataService
 
     public async Task<List<PriceCandleDto>> GetPriceCandlesAsync(GetMarketDataRequest request)
     {
-        var fromUtc = request.From.ToUniversalTime();
-        var toUtc = request.To.ToUniversalTime();
+        var fromUtc = request.From.ToUniversalTime().Ticks;
+        var toUtc = request.To.ToUniversalTime().Ticks;
         
         var ticks = await _context.Ticks
             .AsNoTracking()
-            .Where(tick => tick.AssetId == request.AssetId && tick.Date >= fromUtc && tick.Date <= toUtc)
+            .Where(tick => tick.Symbol == request.Symbol && tick.TimeStamp >= fromUtc && tick.TimeStamp <= toUtc)
+            .Select(tick => new Tick
+            {
+                TimeStamp = tick.TimeStamp,
+                Price = tick.Price,
+                Volume = tick.Volume
+            })
             .ToListAsync();
         
         return BuildCandles(ticks, request.TimeFrame);
@@ -65,8 +72,7 @@ public sealed class MarketDataService : IMarketDataService
         return ticks
             .GroupBy(t => new
             {
-                t.AssetId,
-                IntervalStart = Truncate(t.Date, timeFrame)
+                IntervalStart = Truncate(new DateTime(t.TimeStamp), timeFrame)
             })
             .Select(g => new PriceCandleDto(g.Key.IntervalStart,
                 g.First().Price,

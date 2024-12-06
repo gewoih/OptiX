@@ -1,4 +1,5 @@
 using System.Text;
+using EFCore.BulkExtensions;
 using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -6,7 +7,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using OptiX.Application.Accounts.Services;
-using OptiX.Application.Assets.Services;
 using OptiX.Application.Binance;
 using OptiX.Application.MarketData.Services;
 using OptiX.Application.SignalR;
@@ -36,7 +36,6 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<IAssetService, AssetService>();
 builder.Services.AddScoped<IMarketDataService, MarketDataService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
@@ -132,6 +131,10 @@ app.UseCors("Frontend");
 var scope = app.Services.CreateScope();
 var database = scope.ServiceProvider.GetService<AppDbContext>()?.Database;
 await database?.MigrateAsync();
+
+var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+var ticks = DatabaseSeeder.GenerateTicks(1_000_000);
+await context.BulkInsertAsync(ticks);
 
 if (app.Environment.IsDevelopment())
 {

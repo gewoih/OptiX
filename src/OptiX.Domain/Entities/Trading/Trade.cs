@@ -6,7 +6,7 @@ namespace OptiX.Domain.Entities.Trading;
 public sealed class Trade : Entity
 {
     public Guid AccountId { get; set; }
-    public Guid AssetId { get; set; }
+    public string Symbol { get; set; }
     public TradeStatus Status { get; set; }
     public DateTime OpenedAt { get; set; }
     public DateTime ClosedAt { get; set; }
@@ -24,11 +24,11 @@ public sealed class Trade : Entity
     {
     }
 
-    public Trade(Guid accountId, Guid assetId, TradeDirection direction, TradeDurationMinutes durationMinutes, decimal amount,
+    public Trade(Guid accountId, string Symbol, TradeDirection direction, TradeDurationMinutes durationMinutes, decimal amount,
         decimal openPrice)
     {
         AccountId = accountId;
-        AssetId = assetId;
+        Symbol = Symbol;
         Direction = direction;
         OpenedAt = DateTime.UtcNow;
         PlannedClosingDate = OpenedAt.AddMinutes((int)durationMinutes);
