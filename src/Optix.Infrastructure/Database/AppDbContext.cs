@@ -16,7 +16,7 @@ public sealed class AppDbContext : IdentityDbContext<User, Role, Guid>
     public DbSet<Tick> Ticks { get; set; }
     public DbSet<Trade> Trades { get; set; }
     public DbSet<Transaction> Transactions { get; set; }
-    
+
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
     }

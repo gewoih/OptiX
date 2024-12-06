@@ -26,15 +26,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d980ee12-c4dd-4d59-b270-8afe19edf39b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/Trades/Messaging/Consumers/CloseTradeConsumer.cs" afterDir="false" />
+    <list default="true" id="d980ee12-c4dd-4d59-b270-8afe19edf39b" name="Changes" comment="refactor">
+      <change afterPath="$PROJECT_DIR$/src/OptiX.Api/Controllers/MarketDataController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/MarketData/Requests/GetMarketDataRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OptiX.Application/MarketData/Responses/PriceCandleDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OptiX.Domain/ValueObjects/TimeFrame.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OptiX/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OptiX/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OptiX.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/OptiX.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Api/OptiX.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/OptiX.Api.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/OptiX.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/OptiX.Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/Trades/Services/TradeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/Trades/Services/TradeService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Trading/Trade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Trading/Trade.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/MarketData/Services/IMarketDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/MarketData/Services/IMarketDataService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/MarketData/Services/MarketDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/MarketData/Services/MarketDataService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Application/MarketData/TickDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Application/MarketData/Responses/TickDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Asset/Tick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptiX.Domain/Entities/Asset/Tick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Database/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Optix.Infrastructure/Database/AppDbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Optix.Infrastructure/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,21 +74,22 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/26950f81-9ff1-446e-9de9-3b4bd84b3d98_Saber_Backend_Test.zip.d98/IListSerializer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/4c03e5bf-31c8-49e7-b588-73868652dc9f_Saber_Backend_Test.zip.c9f/ListNode.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/d95181ce-3c26-45f2-8f84-bfda34f8d144_Saber_Backend_Test.zip.144/YourImplementation.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/fbe43630-c235-42ba-8494-8838fa9f9feb_Saber_Backend_Test.zip.feb/YourImplementation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/211e6f3b24fa438a92f1815153647ce2c8f908/c3/1b7af176/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/36af73a990fe4e92a7fe348f070581f68b8e00/24/e1e39a4c/ChartSeries.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/caff57c97c0d4f22be00cefe490dcea92afe00/9d/b0ea1034/ScalarEndpointRouteBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2854ce6d56c18d0d837d3a3ef9c4f2c7c77691fa3528c8394986ac7ce7719/StackFrameIterator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2ec160d423aad657354dc9a131203dc51844dc105bb7d6e906949b8f3b75671/Host.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/32af53f9addbd8407e5f571f6439ce341f8ba46c7f085f2d1c1aa4c2bd1d35/ModelValidator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6a3eb21158caca12f8c9eb0709f59bf53b745b63c4d1fd761df9d1b110aebb/RabbitMqModelContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/94c791509b32b4ce80e27d596e249b2ea2782b8ad8278b719b576e1611461620/OneTimeSetupMethod.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bd1d5c50194fea68ff3559c160230b0ab50f5acf4ce3061bffd6d62958e2182/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ce37be1a06b16c6faa02038d2cc477dd3bca5b217ceeb41c5f2ad45c1bf9/ServiceProvider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e6c5b3f44fd4d4636546069e03625a3c46d75b5c73de150703fe0dbfd1bc9/ConstructorBindingFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f6f937e7fde51c3ca061c59112cdd35b76a72e9ef8821ac361c6ef71e90ea88/ControllerEndpointRouteBuilderExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/OptiX.Api/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/OptiX.Application/Binance/BinanceMarketDataLoader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/OptiX.Application/Trades/Messaging/Consumers/CloseTradeConsumer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/nrane/Desktop/Projects/OptiX/src/OptiX.Application/Trades/Services/TradeService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/OptiX.Application/Users/Services/IUserService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/OptiX.Application/Users/Services/UserService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/OptiX.Domain/Entities/Asset/Tick.cs" root0="FORCE_HIGHLIGHTING" />
@@ -237,6 +241,8 @@
       <workItem from="1733245663765" duration="1087000" />
       <workItem from="1733301946217" duration="5787000" />
       <workItem from="1733327132036" duration="1755000" />
+      <workItem from="1733421798823" duration="44000" />
+      <workItem from="1733474378710" duration="2345000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -390,7 +396,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733327753227</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="feat: automatic trades closing implemented">
+      <option name="closed" value="true" />
+      <created>1733421836723</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1733421836723</updated>
+    </task>
+    <task id="LOCAL-00021" summary="refactor">
+      <option name="closed" value="true" />
+      <created>1733474744916</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1733474744916</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,6 +443,27 @@
     <MESSAGE value="feat: init migration" />
     <MESSAGE value="feat: trade closing + GetLastTickAsync()" />
     <MESSAGE value="feat: AssetService.cs updated, AssetMapper.cs implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: AssetService.cs updated, AssetMapper.cs implemented" />
+    <MESSAGE value="feat: automatic trades closing implemented" />
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/OptiX.Application/MarketData/Services/MarketDataService.cs</url>
+          <line>53</line>
+          <properties documentPath="C:\Users\nrane\Desktop\Projects\OptiX\src\OptiX.Application\MarketData\Services\MarketDataService.cs" containingFunctionPresentation="Method 'GetPriceCandlesAsync'">
+            <startOffsets>
+              <option value="1611" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1805" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

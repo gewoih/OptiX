@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using OptiX.Application.Assets.Services;
 using OptiX.Application.MarketData;
+using OptiX.Application.MarketData.Responses;
 using OptiX.Application.MarketData.Services;
 using OptiX.Application.SignalR;
 

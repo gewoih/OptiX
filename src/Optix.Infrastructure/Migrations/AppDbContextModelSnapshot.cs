@@ -153,7 +153,7 @@ namespace Optix.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Assets");
+                    b.ToTable("Assets", (string)null);
                 });
 
             modelBuilder.Entity("OptiX.Domain.Entities.Asset.Tick", b =>
@@ -190,7 +190,7 @@ namespace Optix.Infrastructure.Migrations
 
                     b.HasIndex("AssetId");
 
-                    b.ToTable("Ticks");
+                    b.ToTable("Ticks", (string)null);
                 });
 
             modelBuilder.Entity("OptiX.Domain.Entities.Identity.Role", b =>
@@ -322,7 +322,7 @@ namespace Optix.Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Accounts");
+                    b.ToTable("Accounts", (string)null);
                 });
 
             modelBuilder.Entity("OptiX.Domain.Entities.Trading.Trade", b =>
@@ -383,7 +383,7 @@ namespace Optix.Infrastructure.Migrations
 
                     b.HasIndex("AccountId");
 
-                    b.ToTable("Trades");
+                    b.ToTable("Trades", (string)null);
                 });
 
             modelBuilder.Entity("OptiX.Domain.Entities.Trading.Transaction", b =>
@@ -420,7 +420,7 @@ namespace Optix.Infrastructure.Migrations
 
                     b.HasIndex("AccountId");
 
-                    b.ToTable("Transactions");
+                    b.ToTable("Transactions", (string)null);
                 });
 
             modelBuilder.Entity("OptiX.Domain.Entities.User.UserProfile", b =>
@@ -446,7 +446,7 @@ namespace Optix.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("UserProfiles");
+                    b.ToTable("UserProfiles", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
