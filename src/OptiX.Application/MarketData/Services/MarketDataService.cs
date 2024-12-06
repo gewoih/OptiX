@@ -1,13 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using Optix.Infrastructure.Database;
 
-namespace OptiX.Application.Ticks.Services;
+namespace OptiX.Application.MarketData.Services;
 
-public sealed class TickService : ITickService
+public sealed class MarketDataService : IMarketDataService
 {
     private readonly AppDbContext _context;
 
-    public TickService(AppDbContext context)
+    public MarketDataService(AppDbContext context)
     {
         _context = context;
     }

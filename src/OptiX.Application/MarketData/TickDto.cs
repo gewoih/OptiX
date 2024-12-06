@@ -1,4 +1,4 @@
-namespace OptiX.Application.Ticks;
+namespace OptiX.Application.MarketData;
 
 public sealed class TickDto
 {

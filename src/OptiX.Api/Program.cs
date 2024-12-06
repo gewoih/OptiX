@@ -8,9 +8,9 @@ using Microsoft.OpenApi.Models;
 using OptiX.Application.Accounts.Services;
 using OptiX.Application.Assets.Services;
 using OptiX.Application.Binance;
+using OptiX.Application.MarketData.Services;
 using OptiX.Application.SignalR;
-using OptiX.Application.Ticks.Services;
-using OptiX.Application.Trades.Messaging;
+using OptiX.Application.Trades.Messaging.Consumers;
 using OptiX.Application.Trades.Services;
 using OptiX.Application.Transactions.Services;
 using OptiX.Application.Users.Services;
@@ -37,7 +37,7 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAssetService, AssetService>();
-builder.Services.AddScoped<ITickService, TickService>();
+builder.Services.AddScoped<IMarketDataService, MarketDataService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
 builder.Services.AddScoped<ITradeService, TradeService>();

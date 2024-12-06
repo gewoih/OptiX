@@ -1,5 +1,5 @@
 using MassTransit;
-using OptiX.Application.Ticks.Services;
+using OptiX.Application.MarketData.Services;
 using OptiX.Application.Trades.Mappers;
 using OptiX.Application.Trades.Requests;
 using OptiX.Application.Trades.Responses;
@@ -14,21 +14,21 @@ namespace OptiX.Application.Trades.Services;
 public sealed class TradeService : ITradeService
 {
     private readonly AppDbContext _context;
-    private readonly ITickService _tickService;
+    private readonly IMarketDataService _marketDataService;
     private readonly ITransactionService _transactionService;
     private readonly IMessageScheduler _messageScheduler;
 
-    public TradeService(AppDbContext context, ITickService tickService, ITransactionService transactionService, IMessageScheduler messageScheduler)
+    public TradeService(AppDbContext context, IMarketDataService marketDataService, ITransactionService transactionService, IMessageScheduler messageScheduler)
     {
         _context = context;
-        _tickService = tickService;
+        _marketDataService = marketDataService;
         _transactionService = transactionService;
         _messageScheduler = messageScheduler;
     }
 
     public async Task<TradeDto?> OpenTradeAsync(OpenTradeRequest request)
     {
-        var lastTick = await _tickService.GetLastTickAsync(request.AssetId);
+        var lastTick = await _marketDataService.GetLastTickAsync(request.AssetId);
         if (lastTick == null)
             return null;
 
@@ -64,7 +64,7 @@ public sealed class TradeService : ITradeService
         if (trade is null)
             return null;
 
-        var lastTick = await _tickService.GetLastTickAsync(trade.AssetId);
+        var lastTick = await _marketDataService.GetLastTickAsync(trade.AssetId);
         if (lastTick == null)
             return null;
 

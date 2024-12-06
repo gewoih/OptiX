@@ -2,7 +2,7 @@ using MassTransit;
 using OptiX.Application.Trades.Requests;
 using OptiX.Application.Trades.Services;
 
-namespace OptiX.Application.Trades.Messaging;
+namespace OptiX.Application.Trades.Messaging.Consumers;
 
 public sealed class CloseTradeConsumer : IConsumer<CloseTradeRequest>
 {

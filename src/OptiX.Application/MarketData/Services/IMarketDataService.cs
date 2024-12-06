@@ -1,6 +1,6 @@
-namespace OptiX.Application.Ticks.Services;
+namespace OptiX.Application.MarketData.Services;
 
-public interface ITickService
+public interface IMarketDataService
 {
     Task SaveAsync(IEnumerable<TickDto> ticks);
     Task<TickDto?> GetLastTickAsync(Guid assetId);
