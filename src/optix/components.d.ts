@@ -8,6 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Button: typeof import('primevue/button')['default']
+    CandleChart: typeof import('./src/components/chart/CandleChart.vue')['default']
     GoogleCallback: typeof import('./src/components/google/GoogleCallback.vue')['default']
     Header: typeof import('./src/components/layout/Header.vue')['default']
     Login: typeof import('./src/components/Login.vue')['default']

@@ -80,7 +80,7 @@ public sealed class MarketDataService : IMarketDataService
                 g.Min(t => t.Price),
                 g.Last().Price,
                 g.Sum(t => t.Volume)))
-            .OrderBy(c => c.StartTime)
+            .OrderBy(c => c.Date)
             .ToList();
     }
 

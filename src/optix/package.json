@@ -14,7 +14,10 @@
   },
   "dependencies": {
     "@primevue/themes": "^4.2.4",
+    "ag-charts-enterprise": "^10.3.3",
+    "ag-charts-vue3": "^10.3.3",
     "axios": "^1.7.8",
+    "chart.js": "^4.4.7",
     "pinia": "^2.2.6",
     "primeicons": "^7.0.0",
     "primevue": "^4.2.4",

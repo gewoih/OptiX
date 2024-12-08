@@ -134,9 +134,12 @@ await dbContext.Database.MigrateAsync();
 
 if (app.Environment.IsDevelopment())
 {
-    var ticks = DatabaseSeeder.GenerateTicks(1_000_000);
-    await dbContext.BulkInsertAsync(ticks);
-    
+    if (await dbContext.Ticks.CountAsync() < 1_000_000)
+    {
+        var ticks = DatabaseSeeder.GenerateTicks(1_000_000);
+        //await dbContext.BulkInsertAsync(ticks);
+    }
+
     app.UseSwagger();
     app.UseSwaggerUI();
 }
