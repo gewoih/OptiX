@@ -133,6 +133,9 @@ namespace Optix.Infrastructure.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
 
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("timestamp with time zone");
+
                     b.Property<decimal>("Price")
                         .HasColumnType("numeric");
 
@@ -140,15 +143,12 @@ namespace Optix.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<long>("TimeStamp")
-                        .HasColumnType("bigint");
-
                     b.Property<decimal>("Volume")
                         .HasColumnType("numeric");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Symbol", "TimeStamp");
+                    b.HasIndex("Symbol", "Date");
 
                     b.ToTable("Ticks");
                 });

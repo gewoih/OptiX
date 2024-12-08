@@ -129,15 +129,14 @@ var app = builder.Build();
 app.UseCors("Frontend");
 
 var scope = app.Services.CreateScope();
-var database = scope.ServiceProvider.GetService<AppDbContext>()?.Database;
-await database?.MigrateAsync();
-
-var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-var ticks = DatabaseSeeder.GenerateTicks(1_000_000);
-await context.BulkInsertAsync(ticks);
+var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+await dbContext.Database.MigrateAsync();
 
 if (app.Environment.IsDevelopment())
 {
+    var ticks = DatabaseSeeder.GenerateTicks(1_000_000);
+    await dbContext.BulkInsertAsync(ticks);
+    
     app.UseSwagger();
     app.UseSwaggerUI();
 }

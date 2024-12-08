@@ -24,7 +24,7 @@ public sealed class MarketDataService : IMarketDataService
             Symbol = tick.Symbol,
             Price = tick.Price,
             Volume = tick.Volume,
-            TimeStamp = tick.TimeStamp
+            Date = tick.Date
         });
 
         await _context.Ticks.AddRangeAsync(marketDataToSave);
@@ -35,13 +35,13 @@ public sealed class MarketDataService : IMarketDataService
     {
         var lastTick = await _context.Ticks
             .Where(tick => tick.Symbol == symbol)
-            .OrderByDescending(tick => tick.TimeStamp)
+            .OrderByDescending(tick => tick.Date)
             .Select(tick => new TickDto
             {
                 Symbol = tick.Symbol,
                 Price = tick.Price,
                 Volume = tick.Volume,
-                TimeStamp = tick.TimeStamp
+                Date = tick.Date
             })
             .FirstOrDefaultAsync();
 
@@ -50,15 +50,15 @@ public sealed class MarketDataService : IMarketDataService
 
     public async Task<List<PriceCandleDto>> GetPriceCandlesAsync(GetMarketDataRequest request)
     {
-        var fromUtc = request.From.ToUniversalTime().Ticks;
-        var toUtc = request.To.ToUniversalTime().Ticks;
+        var fromUtc = request.From.ToUniversalTime();
+        var toUtc = request.To.ToUniversalTime();
         
         var ticks = await _context.Ticks
             .AsNoTracking()
-            .Where(tick => tick.Symbol == request.Symbol && tick.TimeStamp >= fromUtc && tick.TimeStamp <= toUtc)
+            .Where(tick => tick.Symbol == request.Symbol && tick.Date >= fromUtc && tick.Date <= toUtc)
             .Select(tick => new Tick
             {
-                TimeStamp = tick.TimeStamp,
+                Date = tick.Date,
                 Price = tick.Price,
                 Volume = tick.Volume
             })
@@ -72,7 +72,7 @@ public sealed class MarketDataService : IMarketDataService
         return ticks
             .GroupBy(t => new
             {
-                IntervalStart = Truncate(new DateTime(t.TimeStamp), timeFrame)
+                IntervalStart = Truncate(t.Date, timeFrame)
             })
             .Select(g => new PriceCandleDto(g.Key.IntervalStart,
                 g.First().Price,

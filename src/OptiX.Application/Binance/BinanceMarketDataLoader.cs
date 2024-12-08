@@ -40,7 +40,7 @@ public sealed class BinanceMarketDataLoader : BackgroundService
                 {
                     Id = update.Data.Id,
                     Symbol = update.Symbol,
-                    TimeStamp = update.Data.TradeTime.Ticks,
+                    Date = update.Data.TradeTime,
                     Volume = update.Data.Quantity,
                     Price = update.Data.Price,
                 };

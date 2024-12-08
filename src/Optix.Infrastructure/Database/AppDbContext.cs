@@ -24,7 +24,7 @@ public sealed class AppDbContext : IdentityDbContext<User, Role, Guid>
     {
         base.OnModelCreating(builder);
 
-        builder.Entity<Tick>().HasIndex(t => new { t.Symbol, UnixDate = t.TimeStamp });
+        builder.Entity<Tick>().HasIndex(t => new { t.Symbol, t.Date });
     }
 
     public override int SaveChanges()
